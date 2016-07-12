@@ -1,0 +1,165 @@
+== CHANGE LOG ==
+= 2.1.0 =
+	- Fix - Deprecated Tag removed
+	- Update - CSS Updated
+
+= 2.0.9 =
+	- New - New logo Options Compatible for Polylang
+	- Fix - WooCommerce Product Category title added
+
+= 2.0.8 =
+	- Fix - entry meta and entry display on Single Page
+	- Fix - portfolio widgets hover issue fixed for user friendly
+
+= 2.0.7 =
+	- Fix - CSS slider class name fixed
+
+= 2.0.6 =
+	- Fix - add_editor_style path issue fixed
+	- Fix - CSS added for slider issues
+	- Tweak - Slider version changed
+	- Update - WooCommerce CSS Updated
+
+= 2.0.5 =
+	- Fix - Excerpt more function added which was previously removed
+
+= 2.0.4 =
+	- Tweak - Updated French language on version 1.1.3
+	- Update - Minor description changed
+	- Update - Genericons updated to version 3.4.1
+
+= 2.0.3 =
+	- Fix - Footer menu Fixed
+	- Remove - excerpt_more function unwanted removed
+	- Update - CSS Updated
+
+= 2.0.2 =
+	- Fix - CSS bug fixed
+	-Update - Custom JS updated
+
+= 2.0.1 =
+	- Fix - Conflict with Child theme issue fixed
+= 2.0 =
+	- Update - Screenshot image Changed
+
+= 1.1.9 =
+	- Update - target_blank removed from sider
+	- Update - Service widgets name changed to our featured
+= 1.1.8 =
+	- New - View ThemeFreesia Options added
+	- Update - pot file updated
+	- Update - Font family added for Blogquote, Headings and Navigation
+
+= 1.1.7 =
+	- Fixed 
+		- gototop disable issue fixed
+		- Address spelling correction
+		- Double text domain removed
+	- New - Social Icons enable disable button added
+	- Update - Pot file updated
+	- Update - CSS Updated
+
+
+= 1.1.6 =
+	- Fix - Blog entry title missing issue fixed
+= 1.1.5 =
+	- Update - CSS Updated
+	- Fix - __construct() added for widgets
+
+= 1.1.4 =
+	- Fix - Forum link fixed
+
+= 1.1.3 =
+	- Update - CSS updated
+
+= 1.1.2 =
+	- New -
+		- Added testimonial widgets using a category to fetch posts and display as testimonial
+		- Added portfolio widgets
+	- Fixed -
+		- Issues for layout while set to Corporate Template
+	-Update -
+		- pot file updated
+		- style.css updated
+
+= 1.1.1 =
+	- Fixed -
+		- image upload js removed
+		- style.css modified
+		- unwanted code removed from arise-common-functions.php
+
+= 1.1 =
+	- Fixed -
+		- Removed testimonial and our team widgets
+
+= 1.0.9 =
+	- Fixed -
+		- Unwanted button removed from testimonials-widgets.php and ourteam-widgets.php
+		- Text changed for video-widgets.php for user friendly
+		- missing pot file updated
+
+= 1.0.8 =
+	- Fixed -
+		- Removed  jquery.min.js file and also  jQuery loaded function
+		- Missing prefix fixed for main.js as arise-main.js 
+		- Code kept two time removed
+		- Missing - Removed include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); and used class_exists loading extra files
+		- JS conflict issue fixed
+
+= 1.0.7 =
+	- Fixed -
+		- arise_sanitize_dropdown not defined fixed
+		- TGM to latest version 2.5.2.
+		- removed echo''
+		- Translation issue at footer.php fixed and also checked in other place
+		- wp_reset_postdata() missing for custom query added on corporate-arise.php and other page too
+		- Escaping missing $arise_excerpt_length variable fixed
+		- Licence for Google fonts added in readme.txt
+		- quote_slider prefixed with theme slug as arise-quote-slider
+		- custom_meta_box_nonce nonce name  prefixed with theme slug as arise_custom_meta_box_nonce
+		- wp_enqueue_media(); loaded for specific pages
+
+= 1.0.6 =
+- Removed corporate template which is not required
+
+= 1.0.5 =
+	- Fixed - 
+		- Theme URI and Author URI  style.css
+		- Text Domain: arise moved above the license info along with other parameters
+		-  License attribution for TGM class added in readme.txt and license file of TGM inside tgm folder
+		-  All strings translated. Tested by Pig Latin plugin
+		-  Data Sanitization
+		- arise_sanitize_dropdown changed to arise_sanitize_select and saanitizing the input
+		- function_exists removed if defined inside theme functions
+		- Removed include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); and used class_exists loading extra files
+		- add_theme_support( 'woocommerce' );  kept in the function hooked to after_setup_theme
+		- Removed code from header as we have injected meta from hook in other file
+		-  JS error in single page fixed
+		- Removed front-page.phpfor correct handling of front page content. Created Corporate template instead
+		-  possibly prefixing with theme slug
+
+
+= 1.0.4 =
+	- Text name Changed
+	- pot file updated
+	- add_image_size() removed
+	- CSS updated to fit the design
+
+= 1.0.3 =
+	- Checkbox un-defined index issue fixed
+	- Margin added for wooCommerce Ordering
+	- Image issue fixed for blog page
+
+= 1.0.2 =
+	- Gallery template added to fix gallery issue
+	- Minor text issue fixed
+	- Sidebar added for wooCommerce
+	- Description text modified at style.css file
+
+= 1.0.1 =
+	- JavaScript source added according to WordPress guidelines
+	- Boxed Layout and Small Boxed Layout Options added
+	- Added Theme Instructions and changed the link for html5shiv in readme.txt
+
+= 1.0 =
+	- Initial Release

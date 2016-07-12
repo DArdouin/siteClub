@@ -1,0 +1,1125 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: arise 1.0\n"
+"POT-Creation-Date: 2016-02-03 20:32+0545\n"
+"PO-Revision-Date: 2015-08-07 08:34+0545\n"
+"Last-Translator: \n"
+"Language-Team: ThemeFreesia <themefreesia@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __e;__;esc_attr__;esc_attr_e;_x;_n;esc_html__;"
+"esc_html_e;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:32
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:35
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:39
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:46 inc/widgets/widgets-functions/post-widgets.php:135
+#: single.php:53
+msgid "No Comments"
+msgstr ""
+
+#: content.php:46 inc/widgets/widgets-functions/post-widgets.php:135
+#: single.php:53
+msgid "1 Comment"
+msgstr ""
+
+#: content.php:46 inc/widgets/widgets-functions/post-widgets.php:135
+#: single.php:53
+msgid "% Comments"
+msgstr ""
+
+#: content.php:46 inc/widgets/widgets-functions/post-widgets.php:135
+#: single.php:53
+msgid "Comments Off"
+msgstr ""
+
+#: content.php:67 single.php:86
+msgid "Category : "
+msgstr ""
+
+#: content.php:69 single.php:87
+msgid ", "
+msgstr ""
+
+#: content.php:81 inc/settings/arise-functions.php:206
+#: inc/widgets/widgets-functions/portfolio-widgets.php:122
+#: inc/widgets/widgets-functions/post-widgets.php:147
+#: page-templates/arise-corporate.php:67
+msgid "Read More"
+msgstr ""
+
+#: footer.php:85
+msgid "Go to Top"
+msgstr ""
+
+#: functions.php:54
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:55
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:56
+msgid "Add Social Icons Only"
+msgstr ""
+
+#: functions.php:130 functions.php:131
+msgid "Review Arise"
+msgstr ""
+
+#: functions.php:133 functions.php:134
+msgid "Theme Instructions"
+msgstr ""
+
+#: functions.php:136 functions.php:137
+msgid "Forum"
+msgstr ""
+
+#: functions.php:139 functions.php:140
+msgid "View Demo"
+msgstr ""
+
+#: functions.php:146
+msgid "About Arise"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:11
+msgid "Layout Options"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:22
+msgid "Responsive Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:28
+msgid "ON "
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:29
+msgid "OFF"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:39
+msgid "Sidebar Layout Options"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:45
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:46
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:47
+msgid "No Sidebar"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:48
+msgid "Full Width"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:58
+msgid "Blog Image Display Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:64
+msgid "Blog large image display"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:65
+msgid "Blog medium image display"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:75
+msgid "Disable Entry Format from Blog Page"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:80
+msgid "Display Entry Format"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:81
+msgid "Hide Entry Format"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:82
+msgid "Show Button Only"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:83
+msgid "Hide Button Only"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:93
+msgid "Disable Entry Meta from Blog Page"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:98
+msgid "Display Entry Meta"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:99
+msgid "Hide Entry Meta"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:109
+msgid "Design Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:115
+#: inc/settings/arise-common-functions.php:57
+msgid "Full Width Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:116
+msgid "Boxed Layout"
+msgstr ""
+
+#: inc/customizer/functions/design-options.php:117
+msgid "Small Boxed Layout"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:12
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:23
+msgid "Enable Slider"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:29
+#: inc/customizer/functions/theme-options.php:83
+msgid "Front Page"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:30
+#: inc/customizer/functions/theme-options.php:84
+msgid "Entire Site"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:31
+msgid "Disable Slider"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:42
+#: inc/customizer/functions/theme-options.php:150
+msgid "Secondary Button Text"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:55
+msgid "Secondary Button Url"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:61
+msgid "Display Page Slider"
+msgstr ""
+
+#: inc/customizer/functions/featured-content-customizer.php:74
+msgid " Page Slider #"
+msgstr ""
+
+#: inc/customizer/functions/frontpage-features.php:12
+msgid "Display FrontPage Features"
+msgstr ""
+
+#: inc/customizer/functions/frontpage-features.php:23
+msgid "Disable in Front Page"
+msgstr ""
+
+#: inc/customizer/functions/frontpage-features.php:37
+msgid "Title"
+msgstr ""
+
+#: inc/customizer/functions/frontpage-features.php:52
+#: inc/widgets/widgets-functions/portfolio-widgets.php:35
+#: inc/widgets/widgets-functions/video-widgets.php:26
+msgid "Description"
+msgstr ""
+
+#: inc/customizer/functions/frontpage-features.php:67
+msgid " Feature #"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:16
+msgid "Arise WordPress Settings"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:26
+msgid "Arise Theme Options"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:36
+msgid "Arise Slider Options"
+msgstr ""
+
+#: inc/customizer/functions/register-panel.php:46
+msgid "Arise Widgets"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:11
+msgid "Site Title & Logo Options"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:21
+msgid "Site Logo"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:34
+msgid "Site Logo/ Text Options"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:41
+msgid "Display Site Title Only"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:42
+msgid "Display Site Logo Only"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:43
+msgid "Show Both"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:44
+msgid "Disable Both"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:48
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:59
+msgid "Display Header Image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:66
+msgid "Display below Infobar"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:67
+msgid "Display above Infobar"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:77
+msgid "Enable Custom Header Image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:85
+msgid "Disable"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:96
+msgid "Primary Button Text"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:109
+msgid "Disable Header Image Only"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:110
+msgid "Using below settings will not increase the size of header image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:123
+msgid "Header Description"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:137
+msgid "Primary Button Link"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:163
+msgid "Secondary Button Link"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:169
+msgid "Arise Options"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:180
+msgid "Disable headerline from Slider"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:192
+msgid "Disable Top Bar"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:204
+msgid "Disable Search Form"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:216
+msgid "Disable Stick Menu"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:228
+msgid "Disable Goto Top"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:240
+msgid "Disable Top Social Icons"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:252
+msgid "Disable Buttom Social Icons"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:265
+msgid "Reset all default settings. (Refresh it to view the effect)"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:271
+msgid "Enter your custom CSS"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:282
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:290
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:295
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:300
+msgid "Navigation"
+msgstr ""
+
+#: inc/customizer/functions/theme-options.php:305
+msgid "Static Front Page"
+msgstr ""
+
+#: inc/footer-details.php:15 inc/footer-details.php:29
+msgid "WordPress"
+msgstr ""
+
+#: inc/footer-details.php:19 inc/footer-details.php:28
+msgid "Themefreesia"
+msgstr ""
+
+#: inc/footer-details.php:28
+msgid "Designed by:"
+msgstr ""
+
+#: inc/footer-details.php:28
+msgid "Theme Freesia"
+msgstr ""
+
+#: inc/footer-details.php:29
+msgid "Powered by:"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:15
+msgid "Comment navigation"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:18
+msgid "Older Comments"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:21
+msgid "Newer Comments"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:46
+msgid "Default Layout Set in"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:46
+msgid "Customizer"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:52
+msgid "No sidebar Layout"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:62
+msgid "Left sidebar Layout"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:67
+msgid "Right sidebar Layout"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:74
+msgid "Select layout for this specific Page only"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:80
+msgid "Select layout for this specific Post only"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:162
+msgid "on"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:186
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:189
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:191
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:193
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:195
+msgid "Audios"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:197
+msgid "Asides"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:199
+msgid "Images"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:201
+msgid "Galleries"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:203
+msgid "Videos"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:205
+#: tgm/class-tgm-plugin-activation.php:2445
+msgid "Status"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:207
+msgid "Quotes"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:209
+msgid "links"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:211
+msgid "Chats"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:217
+msgid "Archives"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:222
+msgid "Page NOT Found"
+msgstr ""
+
+#: inc/settings/arise-common-functions.php:224
+msgid "Search Results"
+msgstr ""
+
+#: inc/settings/arise-functions.php:119
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:11
+msgid "Display Contact Us Information"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:13
+msgid "TF: Contact Us"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:26
+msgid "Contact Title:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:32
+msgid "Address:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:38
+msgid "Address Link:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:44
+msgid "Phone No 1:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:50
+msgid "Phone No 2:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:56
+msgid "Skype ID:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/contactus-widgets.php:62
+msgid "Email ID:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/parallax-widgets.php:11
+msgid "Display Parallax widgets for Front Page"
+msgstr ""
+
+#: inc/widgets/widgets-functions/parallax-widgets.php:13
+msgid "TF: FP Parallax"
+msgstr ""
+
+#: inc/widgets/widgets-functions/parallax-widgets.php:26
+#: inc/widgets/widgets-functions/portfolio-widgets.php:43
+#: inc/widgets/widgets-functions/video-widgets.php:32
+msgid "Page"
+msgstr ""
+
+#: inc/widgets/widgets-functions/parallax-widgets.php:32
+#: inc/widgets/widgets-functions/video-widgets.php:44
+msgid "Redirect Text:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/parallax-widgets.php:38
+#: inc/widgets/widgets-functions/video-widgets.php:50
+msgid "Redirect Url:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/portfolio-widgets.php:5
+msgid "Portfolio Widget (Front Page)"
+msgstr ""
+
+#: inc/widgets/widgets-functions/portfolio-widgets.php:7
+msgid "TF: FP Portfolio Widget"
+msgstr ""
+
+#: inc/widgets/widgets-functions/portfolio-widgets.php:25
+msgid "Number of Works:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/portfolio-widgets.php:31
+#: inc/widgets/widgets-functions/post-widgets.php:30
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:11
+msgid "Displays Blog Widgets on FrontPage"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:13
+msgid "TF: FP Blog Widget"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:26
+msgid "Check to hide entry format"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:36
+msgid "Description:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:42
+msgid "Number of Post:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:46
+msgid "Show latest Posts"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:47
+msgid "Show posts from a category"
+msgstr ""
+
+#: inc/widgets/widgets-functions/post-widgets.php:50
+#: inc/widgets/widgets-functions/testimonials-widgets.php:22
+msgid "Select category"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:19
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:21
+msgid "Shows widgets at Main Sidebar."
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:28
+msgid "Display Contact Info at Header "
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:30
+msgid "Shows widgets on all page."
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:36
+msgid "Front Page Section"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:38
+msgid ""
+"Shows widgets on Front Page. You may use some of this widgets: TF: Featured "
+"Recent Work, TF: Testimonial, TF: Slogan"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:45
+msgid "Contact Page Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:47
+msgid "Shows widgets on Contact Page Template."
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:54
+msgid "Shortcode For Contact Page"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:56
+msgid ""
+"Add Contact Form 7 Shortcode using text widgets Ex: [contact-form-7 id="
+"\"137\" title=\"Contact form 1\"]"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:66
+msgid "Footer Column "
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:68
+msgid "Shows widgets at Footer Column "
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:76
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-functions/register-widgets.php:78
+msgid "Add WooCommerce Widgets Only"
+msgstr ""
+
+#: inc/widgets/widgets-functions/testimonials-widgets.php:11
+msgid "Display Testimonial on FrontPage"
+msgstr ""
+
+#: inc/widgets/widgets-functions/testimonials-widgets.php:13
+msgid "TF: FP Testimonial"
+msgstr ""
+
+#: inc/widgets/widgets-functions/testimonials-widgets.php:27
+msgid "Number of Testimonial:"
+msgstr ""
+
+#: inc/widgets/widgets-functions/video-widgets.php:11
+msgid "Display Parallax Youtube/ Vimeo video for Front Page"
+msgstr ""
+
+#: inc/widgets/widgets-functions/video-widgets.php:13
+msgid "TF: FP Video Widget"
+msgstr ""
+
+#: inc/widgets/widgets-functions/video-widgets.php:27
+msgid ""
+"Add all iframe code at page editor to display youtube/ Vimeo video. Do not "
+"add iframe code at video content. Your iframe code will be displayed from "
+"page editor"
+msgstr ""
+
+#: inc/widgets/widgets-functions/video-widgets.php:38
+msgid "Video Content:"
+msgstr ""
+
+#: index.php:36 page-templates/contact-template.php:51
+#: page-templates/gallery-template.php:53 page.php:53 search.php:48
+#: single.php:112
+msgid "No Posts Found."
+msgstr ""
+
+#: navigation.php:17
+msgid "&laquo; Previous Page"
+msgstr ""
+
+#: navigation.php:20
+msgid "Next Page &raquo;"
+msgstr ""
+
+#: page-templates/gallery-template.php:40 page.php:40 single.php:75
+msgid "Pages:"
+msgstr ""
+
+#: searchform.php:18
+msgid "Search ..."
+msgstr ""
+
+#: single.php:84
+msgid " "
+msgstr ""
+
+#: single.php:95
+msgid "&larr; Previous"
+msgstr ""
+
+#: single.php:96
+msgid "Next &rarr;"
+msgstr ""
+
+#: single.php:100
+msgid "&larr;"
+msgstr ""
+
+#: single.php:101
+msgid "&rarr;"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:333 tgm/tgm.php:73
+msgid "Install Required Plugins"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:334 tgm/tgm.php:74
+msgid "Install Plugins"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:335 tgm/tgm.php:75
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:336 tgm/tgm.php:76
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:397 tgm/tgm.php:87
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:399
+#: tgm/class-tgm-plugin-activation.php:3031 tgm/tgm.php:88
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:400
+#: tgm/class-tgm-plugin-activation.php:2834
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:524
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:525
+msgid "Update Required"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:639
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:830
+#: tgm/class-tgm-plugin-activation.php:3440
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:937
+#: tgm/class-tgm-plugin-activation.php:940
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:940
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:1883
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2169
+msgid "Required"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2172
+msgid "Recommended"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2188
+msgid "WordPress Repository"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2191
+msgid "External Source"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2194
+msgid "Pre-Packaged"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2211
+msgid "Not Installed"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2215
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2217
+msgid "Active"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2223
+msgid "Required Update not Available"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2226
+msgid "Requires Update"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2229
+msgid "Update recommended"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2237
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2285
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2288
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2291
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2373
+msgid "unknown"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2381
+msgid "Installed version:"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2389
+msgid "Minimum required version:"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2401
+msgid "Available version:"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2424
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2438
+msgid "Plugin"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2439
+msgid "Source"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2440
+msgid "Type"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2444
+msgid "Version"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2497
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2502
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2572
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2605
+msgid "Install"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2611
+msgid "Update"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2614
+msgid "Activate"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2647
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2683
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2685
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2790
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:2816
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3030
+msgid "Plugin activation failed."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3364
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3366
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3367
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3371
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3372
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3372
+#: tgm/class-tgm-plugin-activation.php:3378
+msgid "Show Details"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3372
+#: tgm/class-tgm-plugin-activation.php:3378
+msgid "Hide Details"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3373
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3374
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3377
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3378
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3379
+msgid "All installations have been completed."
+msgstr ""
+
+#: tgm/class-tgm-plugin-activation.php:3380
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: tgm/tgm.php:89
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""

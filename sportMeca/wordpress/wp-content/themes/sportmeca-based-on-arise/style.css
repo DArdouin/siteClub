@@ -1,0 +1,139 @@
+/*
+Theme Name: SportMeca based on arise
+Author: Damien ARDOUIn
+Template: arise
+Version: 0.1
+*/
+
+@import url("../arise/style.css");
+
+/* Responsive Styles
+================================================== */
+
+/*All size smaller than 1301*/
+@media only screen and (max-width: 1300px) {
+
+}
+
+
+/*All size smaller than 1024*/
+==================================================
+@media only screen and (max-width: 1023px) {
+	.sml-site-logo {
+	height: auto;/* Make sure images are scaled correctly. */
+	max-width: 50%;/* Adhere to container width. */
+	vertical-align: top;
+	}
+}
+
+/*All Mobile Screen ( smaller than 768px )*/
+==================================================
+@media only screen and (max-width: 767px) {
+
+}
+
+/*All Mobile Screen ( smaller than 481px )*/
+==================================================
+@media only screen and (max-width: 480px) {
+	
+}
+
+/*All Mobile ( smaller than 320px )*/
+==================================================
+@media only screen and (max-width: 319px) {
+	
+}
+
+.engagement{
+	background:transparent;
+	margin:10px;
+	padding-top: 0.01em;
+    padding-right: 16px;
+    padding-bottom: 0.01em;
+    padding-left: 16px;
+/*	border-left-color: #b3d1ff;
+	border-left-style: solid;
+	border-left-width: 6px;*/
+}
+
+.surengagement_pair{
+	background:white;
+	margin:10px;
+	padding-top: 0.01em;
+    padding-right: 16px;
+    padding-bottom: 0.01em;
+    padding-left: 16px;
+	border-color: #aaa;
+	border-style: solid;
+	border-width: 3px;
+}
+
+.surengagement_impair{
+	background:#e6f3ff;
+	margin:10px;
+	padding-top: 0.01em;
+    padding-right: 16px;
+    padding-bottom: 0.01em;
+    padding-left: 16px;
+	border-color: #aaa;
+	border-style: solid;
+	border-width: 3px;
+}
+
+label.sml_valid[status='true']{
+	visibility: hidden;
+}
+
+label.sml_valid[status='false']{
+	visibility: visible;
+	color: red
+}
+
+input.sml_input[status='false']{
+	border-color: red;
+	border-style: solid;
+	border-width: 2px;
+}
+
+select.sml_select[status='false']{
+    padding: 10px;
+    border: 1px solid;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #fafafa;	
+    color: red;
+    font: 15px 'Roboto', sans-serif;
+    line-height: 22px;
+    word-wrap: break-word;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+select.sml_select{
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #fafafa;	
+    color: #666666;
+    font: 15px 'Roboto', sans-serif;
+    line-height: 22px;
+    word-wrap: break-word;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+label.save_status[status='true']{
+	visibility: visible;
+	color: green;
+}
+
+label.save_status[status='false']{
+	visibility: visible;
+	color: red;
+}
+
+label.save_status[status='default']{
+	visibility: hidden;
+}
+		
