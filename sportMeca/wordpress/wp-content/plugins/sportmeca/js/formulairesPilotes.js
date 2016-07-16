@@ -128,7 +128,6 @@ jQuery(document).ready(function($){
         });
         
         //On prépare la requête pour enregistrement des données
-        alert(); 
         if(form_ok){
             //On effectue la requête ajax
             $.ajax({
@@ -139,8 +138,11 @@ jQuery(document).ready(function($){
                 data : {                    
                     action : 'sml_save_engagement',
                     id : $(form).attr('id_pilote'),
-                    field_race_number : $(form).find('h4.race_number').attr('id'),
-                    race_number : $(form).find('h4.race_number').attr('race_number'),
+                    //field_race_number : $(form).find('h4.race_number').attr('id'),
+                    race_number : $('#numero_' + form_index).attr('race_number'),
+                    eng_type : $(form).attr('eng_type'),
+                    race_name : $(form).attr('race_name'),
+                    team_key : $(form).attr('team_key'),
                     last_name : $('#in_last_name' + form_index).val(),
                     first_name : $('#in_first_name' + form_index).val(),
                     birth_date : $('#in_birth_date' + form_index).val(),
@@ -165,6 +167,8 @@ jQuery(document).ready(function($){
                     if(data['success']){
                         lab_save_status.attr('status','true');
                         lab_save_status.text("Enregistrement effectué avec succès");
+                        var str = "N° de course : " + data['race_number'];
+                        $('#numero_' + form_index).attr('race_number').text(str);
                     } else{
                         lab_save_status.attr('status','false');
                         lab_save_status.text("Erreur lors de l'enregistrement de vos informations");                      

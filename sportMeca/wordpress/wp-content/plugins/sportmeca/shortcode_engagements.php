@@ -99,7 +99,6 @@ class GestionEngagement {
                     //Si on a pas la même clé que l'engagement précédent, on termine le surengagement pour en commencer un nouveau
                     if($i == 0) $previous_row_key = $row->team_key; //Pour le premier               
                     if($row->team_key != $previous_row_key){
-                        $j ++;
                         $html[] = "</div><div class='surengagement_" . $pair . "'>"; //On ferme le surengagement précédent, on en ouvre un autre  
                         $num_pilote = 1;
                         $pair = ($pair=='pair') ? 'impair' : 'pair'  ;
@@ -118,9 +117,10 @@ class GestionEngagement {
                     }
                     $i++;                    
                     $html[] = "<div class='engagement'>";
-                    $html[] = "<form id='form_" . $row->id . "' id_pilote='" . $row->id ."' index='" . $i . "'>";
+                    $html[] = "<form id='form_" . $row->id . "' id_pilote='" . $row->id ."' index='" . $i . "' "
+                            .  "eng_type='" . $row->eng_type . "' race_name='" . $race_name . "' team_key='" . $row->team_key . "'>";
                     $numero = ($row->race_number != 0) ? $row->race_number : "non attribué" ;
-                    $html[] = "<h4 id=numero_" . $j . " class='race_number' race_number=" . $row->race_number . ">N° de course : " . $numero ."</h4>";
+                    $html[] = "<h4 id=numero_" . $i . " class='race_number' race_number=" . $row->race_number . ">N° de course : " . $numero ."</h4>";
                     $html[] = $this->sml_add_input('Nom *','text','last_name',$i, $row->last_name, '');
                     $html[] = $this->sml_add_input('Prénom *','text','first_name',$i, $row->first_name, '');
                     $html[] = $this->sml_add_input('Date de naissance *','date','birth_date',$i,$row->birth_date, '');;
@@ -521,11 +521,58 @@ class GestionEngagement {
         $vh_displacement = mysql_real_escape_string($_POST['vh_displacement']);
         $vh_year = mysql_real_escape_string($_POST['vh_year']);
         $vh_chassis_number = mysql_real_escape_string($_POST['vh_chassis_number']);
+        $race_number = $_POST['race_number'];
+        $race_name = $_POST['race_name'];
+        $team_key = $_POST['team_key'];
+        $eng_type = $_POST['eng_type'];
         
-        //On fait l'insertion
+        //On regarde le numéro
+        if($race_number == 0){
+            //Pas de numéro attribué. On regarde s'il n'a pas déjà un coéquipier avec un numéro. 
+            //Sinon, on recherche le plus grand numéro de sa catégorie (+1)
+            //Si c'est le premier de sa catégorie), on donne le numéro manuellement
+            //ATTENTION : il faut regarder dans une même course
+            $req1 = $wpdb->get_results( //Le plus grand numéro de son équipage                    
+                        "select max(race_number) as max_num_cat from wp_pilotes "
+                    .   "where team_key = '{$team_key}' "
+                    .   "and race_number != 0 "
+                    .   "and race_name = '{$race_name}' " 
+            );
+            if(empty($req)){ //Si pas de numéro d'équipe, on cherche le plus grand numéro de la catégorie
+                $req2 = $wpdb->get_results( //Le plus grand numéro de sa catégorie
+                        "select max(race_number)  as max_num_cat from wp_pilotes "
+                    .   "where eng_type = '{$eng_type}' and race_name = '{$race_name}' " 
+                );
+            }  
+            error_log("select max(race_number)  as max_num_cat from wp_pilotes "
+                    .   "where eng_type = '{$eng_type}' and race_name = '{$race_name}' ",0);
+            $max = 0;
+            if(!empty($req2)){ //Si la requête nous retourne quelque chose
+                error_log("Requête 'plus grand numéro de la catégorie' non vide",0);
+                foreach($req2 as $row){ //On recherche la plus grande valeur
+                    error_log($row->max_num_cat,0);
+                    $max = ($row == null) ? $max : max($max,$row->max_num_cat) ;
+                }
+            }
+           
+            if($max == 0){ //Si on a récupéré aucun numéro, c'est qu'on est le premier de la catégorie
+                if(strpos($eng_type, '85') !== false){ //Catégorie pour les 85cm3
+                    $race_number = 120;
+                } else if(strpos($eng_type, 'quad') !== false) { //Catégories pour les quads
+                    $race_number = 1;
+                } else if(strpos($eng_type, 'solo') !== false) { //Si ni quad ni 85, on prend les solos
+                    $race_number = 150;
+                } else if(strpos($eng_type, 'duo') !== false) { //Si ni quad ni 85, on prend les duos
+                    $race_number = 1;
+                }
+            } else $race_number = $max + 1; //Sinon, on prend le premier numéro qui suit 
+        }
+        
+                //On fait l'insertion
         $result = $wpdb->update( 
             'wp_pilotes', 
             array( 
+                'race_number' => $race_number,
                 'last_name' => $last_name,
                 'first_name' => $first_name,
                 'birth_date' => $birth_date,
@@ -551,6 +598,7 @@ class GestionEngagement {
         
         //On prépare la réponse
         if($result !== false) $return['success'] = true;
+        $return['race_number'] = $race_number;
 	header('Content-Type: application/json');
         echo json_encode($return);
 

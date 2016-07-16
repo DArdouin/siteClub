@@ -49,3 +49,11 @@ on t1.idt1 = t2.idt2
 --Donne les produits
 select post_name as type, post_excerpt as race_name from wp_posts
 where post_type = 'product'
+
+--Donne le numéro de course, pour une clé équipage
+select max(race_number) from wp_pilotes 
+where team_key = '025176372016187WednesdayJuly14678259001categorie=duo-motoid=1product=262'
+and race_number != 0
+and race_name = ''
+
+--Le plus grand numéro de la catégorie
