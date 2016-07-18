@@ -500,27 +500,33 @@ class GestionEngagement {
         $return = array('success' => false);
         global $wpdb;
         
+        // ...Call the database connection settings
+        //error_log(get_home_path() . "wp-config.php",0);
+
+        // ...Connect to WP database
+        $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        
         //On commence par récupérer le contenu du post
         $id = $_POST['id'];
-        $last_name = mysql_real_escape_string($_POST['last_name']);
-        $first_name = mysql_real_escape_string($_POST['first_name']);
-        $birth_date = mysql_real_escape_string($_POST['birth_date']);
-        $email = mysql_real_escape_string($_POST['email']);
-        $phone_number = mysql_real_escape_string($_POST['phone_number']);
-        $adress = mysql_real_escape_string($_POST['adress']);
-        $cedex = mysql_real_escape_string($_POST['cedex']);
-        $city = mysql_real_escape_string($_POST['city']);
-        $country = mysql_real_escape_string($_POST['country']);                    
-        $insurance = mysql_real_escape_string($_POST['insurance']);
-        $ffm_licence_number = mysql_real_escape_string($_POST['ffm_licence_number']);
-        $casm_number = mysql_real_escape_string($_POST['casm_number']);
-        $team = mysql_real_escape_string($_POST['team']);
-        $category = mysql_real_escape_string($_POST['category']);
-        $vh_brand = mysql_real_escape_string($_POST['vh_brand']); 
-        $vh_type = mysql_real_escape_string($_POST['vh_type']);
-        $vh_displacement = mysql_real_escape_string($_POST['vh_displacement']);
-        $vh_year = mysql_real_escape_string($_POST['vh_year']);
-        $vh_chassis_number = mysql_real_escape_string($_POST['vh_chassis_number']);
+        $last_name = $mysqli->real_escape_string($_POST['last_name']);
+        $first_name = $mysqli->real_escape_string($_POST['first_name']);
+        $birth_date = $mysqli->real_escape_string($_POST['birth_date']);
+        $email = $mysqli->real_escape_string($_POST['email']);
+        $phone_number = $mysqli->real_escape_string($_POST['phone_number']);
+        $adress = $mysqli->real_escape_string($_POST['adress']);
+        $cedex = $mysqli->real_escape_string($_POST['cedex']);
+        $city = $mysqli->real_escape_string($_POST['city']);
+        $country = $mysqli->real_escape_string($_POST['country']);                    
+        $insurance = $mysqli->real_escape_string($_POST['insurance']);
+        $ffm_licence_number = $mysqli->real_escape_string($_POST['ffm_licence_number']);
+        $casm_number = $mysqli->real_escape_string($_POST['casm_number']);
+        $team = $mysqli->real_escape_string($_POST['team']);
+        $category = $mysqli->real_escape_string($_POST['category']);
+        $vh_brand = $mysqli->real_escape_string($_POST['vh_brand']); 
+        $vh_type = $mysqli->real_escape_string($_POST['vh_type']);
+        $vh_displacement = $mysqli->real_escape_string($_POST['vh_displacement']);
+        $vh_year = $mysqli->real_escape_string($_POST['vh_year']);
+        $vh_chassis_number = $mysqli->real_escape_string($_POST['vh_chassis_number']);
         $race_number = $_POST['race_number'];
         $race_name = $_POST['race_name'];
         $team_key = $_POST['team_key'];

@@ -168,7 +168,7 @@ jQuery(document).ready(function($){
                         lab_save_status.attr('status','true');
                         lab_save_status.text("Enregistrement effectué avec succès");
                         var str = "N° de course : " + data['race_number'];
-                        $('#numero_' + form_index).attr('race_number').text(str);
+                        $('#numero_' + form_index).text(str);
                     } else{
                         lab_save_status.attr('status','false');
                         lab_save_status.text("Erreur lors de l'enregistrement de vos informations");                      
