@@ -563,13 +563,13 @@ class GestionEngagement {
            
             if($max == 0){ //Si on a récupéré aucun numéro, c'est qu'on est le premier de la catégorie
                 if(strpos($eng_type, '85') !== false){ //Catégorie pour les 85cm3
-                    $race_number = 120;
+                    $race_number = 123;
                 } else if(strpos($eng_type, 'quad') !== false) { //Catégories pour les quads
-                    $race_number = 1;
+                    $race_number = 4;
                 } else if(strpos($eng_type, 'solo') !== false) { //Si ni quad ni 85, on prend les solos
-                    $race_number = 150;
+                    $race_number = 153;
                 } else if(strpos($eng_type, 'duo') !== false) { //Si ni quad ni 85, on prend les duos
-                    $race_number = 1;
+                    $race_number = 4;
                 }
             } else $race_number = $max + 1; //Sinon, on prend le premier numéro qui suit 
         }
