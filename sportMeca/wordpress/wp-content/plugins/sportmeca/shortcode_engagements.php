@@ -545,9 +545,30 @@ class GestionEngagement {
                     .   "and race_name = '{$race_name}' " 
             );
             if(empty($req)){ //Si pas de numéro d'équipe, on cherche le plus grand numéro de la catégorie
+                //On calcul les bornes de la catégorie
+                if(strpos($eng_type, '85') !== false){ //Catégorie pour les 85cm3
+                    $min_cat = 123;
+                    $max_cat = 149;
+                } else if(strpos($eng_type, 'quad') !== false) { //Catégories pour les quads
+                    $min_cat = 4;
+                    $max_cat = 999;
+                } else if(strpos($eng_type, 'solo') !== false) { //Si ni quad ni 85, on prend les solos
+                    $min_cat = 153;
+                    $max_cat = 999;
+                } else if(strpos($eng_type, 'duo') !== false) { //Si ni quad ni 85, on prend les duos
+                    $min_cat = 4;
+                    $max_cat = 149;
+                }
+                
                 $req2 = $wpdb->get_results( //Le plus grand numéro de sa catégorie
-                        "select max(race_number)  as max_num_cat from wp_pilotes "
-                    .   "where eng_type = '{$eng_type}' and race_name = '{$race_name}' " 
+                        "select min(race_number) as max_num_cat from wp_pilotes "
+                    .    "where race_number BETWEEN {$min_cat} and {$max_cat} "
+                    .    "and eng_type = '{$eng_type}' "
+                    .    "and race_name = '{$race_name}' "
+                    .    "and race_number + 1 not in "
+                    .    "( "
+                    .    "    select race_number from wp_pilotes "
+                    .    ") "
                 );
             }  
             error_log("select max(race_number)  as max_num_cat from wp_pilotes "
@@ -562,15 +583,7 @@ class GestionEngagement {
             }
            
             if($max == 0){ //Si on a récupéré aucun numéro, c'est qu'on est le premier de la catégorie
-                if(strpos($eng_type, '85') !== false){ //Catégorie pour les 85cm3
-                    $race_number = 123;
-                } else if(strpos($eng_type, 'quad') !== false) { //Catégories pour les quads
-                    $race_number = 4;
-                } else if(strpos($eng_type, 'solo') !== false) { //Si ni quad ni 85, on prend les solos
-                    $race_number = 153;
-                } else if(strpos($eng_type, 'duo') !== false) { //Si ni quad ni 85, on prend les duos
-                    $race_number = 4;
-                }
+                $race_number = $min_cat;
             } else $race_number = $max + 1; //Sinon, on prend le premier numéro qui suit 
         }
         

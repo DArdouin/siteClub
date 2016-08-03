@@ -56,4 +56,13 @@ where team_key = '025176372016187WednesdayJuly14678259001categorie=duo-motoid=1p
 and race_number != 0
 and race_name = ''
 
---Le plus grand numéro de la catégorie
+--Le plus petit numéro disponible de la catégorie
+select race_number + 1 from wp_pilotes
+where race_number BETWEEN 3 and 199
+and team_key = '{$team_key}' 
+and race_number != 0
+and race_name = '{$race_name}'
+and race_number + 1 not in
+(
+    select race_number from wp_pilotes
+)
