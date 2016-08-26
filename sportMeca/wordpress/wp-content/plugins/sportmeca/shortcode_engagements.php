@@ -538,13 +538,13 @@ class GestionEngagement {
             //Sinon, on recherche le plus grand numéro de sa catégorie (+1)
             //Si c'est le premier de sa catégorie), on donne le numéro manuellement
             //ATTENTION : il faut regarder dans une même course
-            $req1 = $wpdb->get_results( //Le plus grand numéro de son équipage                    
-                        "select max(race_number) as max_num_cat from wp_pilotes "
+            $req1 = $wpdb->get_results( //Le numéro de l'équipage                   
+                        "select race_number from wp_pilotes "
                     .   "where team_key = '{$team_key}' "
                     .   "and race_number != 0 "
                     .   "and race_name = '{$race_name}' " 
             );
-            if(empty($req)){ //Si pas de numéro d'équipe, on cherche le plus grand numéro de la catégorie
+            if(empty($req1)){ //Si pas de numéro d'équipe, on cherche le numéro libre
                 //On calcul les bornes de la catégorie
                 if(strpos($eng_type, '85') !== false){ //Catégorie pour les 85cm3
                     $min_cat = 123;
@@ -560,31 +560,53 @@ class GestionEngagement {
                     $max_cat = 149;
                 }
                 
-                $req2 = $wpdb->get_results( //Le plus grand numéro de sa catégorie
-                        "select min(race_number) as max_num_cat from wp_pilotes "
-                    .    "where race_number BETWEEN {$min_cat} and {$max_cat} "
-                    .    "and eng_type = '{$eng_type}' "
-                    .    "and race_name = '{$race_name}' "
-                    .    "and race_number + 1 not in "
-                    .    "( "
-                    .    "    select race_number from wp_pilotes "
-                    .    ") "
+                $req2 = $wpdb->get_results( //Le premier numéro libre de la catégorie
+//                        "select min(race_number + 1) as max_num_cat from wp_pilotes "
+//                    .    "where race_number + 1 BETWEEN {$min_cat} and {$max_cat} "
+//                    .    "and eng_type = '{$eng_type}' "
+//                    .    "and race_name = '{$race_name}' "
+//                    .    "and race_number + 1 not in "
+//                    .    "( "
+//                    .    "    select race_number from wp_pilotes "
+//                    .    ") "
+                        "select race_number from wp_pilotes "
+                    .   "where race_number != 0 "
+                    .   "and race_name = '{$race_name}' "
+                    .   "and eng_type = '{$eng_type}' "
+                    .   "order by race_number"
                 );
-            }  
-            error_log("select max(race_number)  as max_num_cat from wp_pilotes "
-                    .   "where eng_type = '{$eng_type}' and race_name = '{$race_name}' ",0);
-            $max = 0;
-            if(!empty($req2)){ //Si la requête nous retourne quelque chose
-                error_log("Requête 'plus grand numéro de la catégorie' non vide",0);
-                foreach($req2 as $row){ //On recherche la plus grande valeur
-                    error_log($row->max_num_cat,0);
-                    $max = ($row == null) ? $max : max($max,$row->max_num_cat) ;
+                if(empty($req2)){
+                    $race_number = $min_cat;
+                } else {
+                    //On récupère la liste des numéros, triée dans l'ordre        
+                    $i = 1;
+                    $old = 0;
+                    foreach($req2 as $row){
+                        $temp_number = $row->race_number;
+                        //Si on est sur la première ligne de la requête (le premier numéro attribué)
+                        if($i == 1){
+                            //Si le premier numéro attribué n'est pas le numéro de départ de la catégorie
+                            if($temp_number != $min_cat)
+                            {
+                                $race_number = $min_cat;
+                                break;
+                            }
+                        }
+                        else { //Si on est pas sur le premier numéro attribué, on vérifie qu'on est bien à +1 numéro du précédent
+                            if($old + 1 < $temp_number){
+                                $race_number = $old + 1;
+                                break;
+                            }
+                        }
+                        $old = $temp_number;
+                        $i++;
+                    }   
                 }
+            } else { //Si il y avait un numéro d'équipe, on le récupère
+                foreach($req1 as $row){
+                    $race_number = $row->race_number;
+                }   
             }
-           
-            if($max == 0){ //Si on a récupéré aucun numéro, c'est qu'on est le premier de la catégorie
-                $race_number = $min_cat;
-            } else $race_number = $max + 1; //Sinon, on prend le premier numéro qui suit 
         }
         
                 //On fait l'insertion
