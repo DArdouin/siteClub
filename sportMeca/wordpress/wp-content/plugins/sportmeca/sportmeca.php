@@ -15,6 +15,7 @@ class sportMecaPlugin
         include 'registration.php'; //Page servant à gérer l'inscription des utilisateurs sur le site
         include 'eCommerce.php';
         include 'shortcode_engagements.php';
+        include 'shortcode_listepilotes.php';
         
         //On inclus les scripts JS
         //$js_directory = '/js/'; 
@@ -34,6 +35,7 @@ class sportMecaPlugin
         new RegistrationPage();
         new GestionECommerce();
         new GestionEngagement();
+        new AffichageEngagements();
     }
     
     //Ajoute un bouton de co/déco dans le menu

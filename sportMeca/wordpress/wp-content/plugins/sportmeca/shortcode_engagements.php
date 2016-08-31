@@ -581,7 +581,9 @@ class GestionEngagement {
                     //On récupère la liste des numéros, triée dans l'ordre        
                     $i = 1;
                     $old = 0;
-                    foreach($req2 as $row){
+                    foreach($req2 as $row){//On parcous les numéros, voir s'il y a un intervalle de libre
+                        error_log('i=' . $i);
+                        error_log('temp number = ' . $row->race_number);
                         $temp_number = $row->race_number;
                         //Si on est sur la première ligne de la requête (le premier numéro attribué)
                         if($i == 1){
@@ -600,7 +602,11 @@ class GestionEngagement {
                         }
                         $old = $temp_number;
                         $i++;
-                    }   
+                    }
+                    
+                    //S'il n'y avait pas d'intervalle de libre, on donne le dernier numéro
+                    if ($race_number == 0)
+                        $race_number = $old + 1;;
                 }
             } else { //Si il y avait un numéro d'équipe, on le récupère
                 foreach($req1 as $row){
