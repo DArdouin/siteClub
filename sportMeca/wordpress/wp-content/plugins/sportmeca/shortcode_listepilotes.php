@@ -38,10 +38,8 @@ class AffichageEngagements {
         
             //Les 85
         
-        $html[] = '<div class="button_list">'
-        .   $this->get_switch("Test1","solo_moto")
-        .   $this->get_switch("Test2","duo_moto")
-        .   '</div>';   
+        $html[] += $this->get_switch("Moto solo","solo_moto");
+        $html[] += $this->get_switch("Moto équipage","duo_moto");   
         
         echo implode('', $html);
     }
@@ -53,11 +51,15 @@ class AffichageEngagements {
      * @return type
      */
     public function get_switch($label,$race_type){
-        $html[] = '<label class="switch">'
-        .   "<input id='in_{$label}' class='switch-input' type='checkbox' />"
-        .   '<span class="switch-label" data-on="On" data-off="Off"></span>' 
-        .   '<span class="switch-handle"></span> '
-        .   '</label>';
+        $html[] = 
+            "<div class='sml_toogle'>"
+        .       "<label>{$label}</label>" 
+        .       "<br>"
+        .      "<label class='switch'>"
+        .         "<input id='{$race_type}' type='checkbox'>"
+        .         "<div class='slider round'></div>"
+        .       "</label>"
+        .   "</div>";
         
         return implode('',$html);
     }
