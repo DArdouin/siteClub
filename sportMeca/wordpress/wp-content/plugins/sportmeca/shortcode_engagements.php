@@ -573,6 +573,7 @@ class GestionEngagement {
                     .   "where race_number != 0 "
                     .   "and race_name = '{$race_name}' "
                     .   "and eng_type = '{$eng_type}' "
+                    .   "and race_number >= {$min_cat} "
                     .   "order by race_number"
                 );
                 if(empty($req2)){
@@ -600,8 +601,8 @@ class GestionEngagement {
                                 break;
                             }
                         }
-                        $old = $temp_number;
-                        $i++;
+                       $old = $temp_number;
+                       $i++;                      
                     }
                     
                     //S'il n'y avait pas d'intervalle de libre, on donne le dernier numéro
