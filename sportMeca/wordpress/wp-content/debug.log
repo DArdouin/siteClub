@@ -1,164 +1,73 @@
-﻿[10-Jul-2016 15:20:11 UTC] On s'apprête à modifier un engagement
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: last_name in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 491
-[10-Jul-2016 15:20:11 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 491
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: first_name in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: birth_date in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 493
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: email in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 494
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: phone_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 495
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: adress in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 496
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: cedex in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 497
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: city in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 498
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: country in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 499
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: insurance in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 500
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: ffm_licence_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: casm_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 502
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: team in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 503
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: category in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 504
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: vh_brand in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 505
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: vh_type in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 506
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: vh_displacement in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 507
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: vh_year in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 508
-[10-Jul-2016 15:20:11 UTC] PHP Notice:  Undefined index: vh_chassis_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 509
-[10-Jul-2016 15:23:05 UTC] On s'apprête à modifier un engagement
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: last_name in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 491
-[10-Jul-2016 15:23:05 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 491
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: first_name in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: birth_date in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 493
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: email in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 494
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: phone_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 495
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: adress in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 496
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: cedex in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 497
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: city in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 498
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: country in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 499
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: insurance in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 500
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: ffm_licence_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[10-Jul-2016 15:23:05 UTC] PHP Notice:  Undefined index: casm_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 502
-[10-Jul-2016 15:23:06 UTC] PHP Notice:  Undefined index: team in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 503
-[10-Jul-2016 15:23:06 UTC] PHP Notice:  Undefined index: category in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 504
-[10-Jul-2016 15:23:06 UTC] PHP Notice:  Undefined index: vh_brand in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 505
-[10-Jul-2016 15:23:06 UTC] PHP Notice:  Undefined index: vh_type in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 506
-[10-Jul-2016 15:23:06 UTC] PHP Notice:  Undefined index: vh_displacement in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 507
-[10-Jul-2016 15:23:06 UTC] PHP Notice:  Undefined index: vh_year in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 508
-[10-Jul-2016 15:23:06 UTC] PHP Notice:  Undefined index: vh_chassis_number in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 509
-[10-Jul-2016 15:26:37 UTC] On s'apprête à modifier un engagement
-[10-Jul-2016 15:26:37 UTC] cache
-[10-Jul-2016 15:26:37 UTC] action
-[10-Jul-2016 15:26:37 UTC] id
-[10-Jul-2016 15:26:37 UTC] PHP Notice:  Undefined variable: result in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 544
-[10-Jul-2016 15:26:37 UTC] PHP Notice:  Undefined variable: result in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 546
-[10-Jul-2016 15:28:28 UTC] On s'apprête à modifier un engagement
-[10-Jul-2016 15:28:28 UTC] cache
-[10-Jul-2016 15:28:28 UTC] action
-[10-Jul-2016 15:28:28 UTC] id
-[10-Jul-2016 15:28:28 UTC] last_name
-[10-Jul-2016 15:28:28 UTC] PHP Notice:  Undefined variable: result in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 544
-[10-Jul-2016 15:28:28 UTC] PHP Notice:  Undefined variable: result in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 546
-[10-Jul-2016 15:41:21 UTC] On s'apprête à modifier un engagement
-[10-Jul-2016 15:41:21 UTC] cache
-[10-Jul-2016 15:41:21 UTC] action
-[10-Jul-2016 15:41:21 UTC] id
-[10-Jul-2016 15:41:21 UTC] last_name
-[10-Jul-2016 15:41:21 UTC] first_name
-[10-Jul-2016 15:41:21 UTC] birth_date
-[10-Jul-2016 15:41:21 UTC] email
-[10-Jul-2016 15:41:21 UTC] phone_number
-[10-Jul-2016 15:41:21 UTC] adress
-[10-Jul-2016 15:41:21 UTC] cedex
-[10-Jul-2016 15:41:21 UTC] city
-[10-Jul-2016 15:41:21 UTC] country
-[10-Jul-2016 15:41:21 UTC] insurance
-[10-Jul-2016 15:41:21 UTC] ffm_licence_number
-[10-Jul-2016 15:41:21 UTC] casm_number
-[10-Jul-2016 15:41:21 UTC] team
-[10-Jul-2016 15:41:21 UTC] category
-[10-Jul-2016 15:41:21 UTC] vh_brand
-[10-Jul-2016 15:41:21 UTC] vh_type
-[10-Jul-2016 15:41:21 UTC] vh_displacement
-[10-Jul-2016 15:41:21 UTC] vh_year
-[10-Jul-2016 15:41:21 UTC] vh_chassis_number
-[10-Jul-2016 15:41:21 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 497
-[10-Jul-2016 15:45:52 UTC] On s'apprête à modifier un engagement
-[10-Jul-2016 15:45:52 UTC] cache
-[10-Jul-2016 15:45:52 UTC] action
-[10-Jul-2016 15:45:52 UTC] id
-[10-Jul-2016 15:45:52 UTC] last_name
-[10-Jul-2016 15:45:52 UTC] first_name
-[10-Jul-2016 15:45:52 UTC] birth_date
-[10-Jul-2016 15:45:52 UTC] email
-[10-Jul-2016 15:45:52 UTC] phone_number
-[10-Jul-2016 15:45:52 UTC] adress
-[10-Jul-2016 15:45:52 UTC] cedex
-[10-Jul-2016 15:45:52 UTC] city
-[10-Jul-2016 15:45:52 UTC] country
-[10-Jul-2016 15:45:52 UTC] insurance
-[10-Jul-2016 15:45:52 UTC] ffm_licence_number
-[10-Jul-2016 15:45:52 UTC] casm_number
-[10-Jul-2016 15:45:52 UTC] team
-[10-Jul-2016 15:45:52 UTC] category
-[10-Jul-2016 15:45:52 UTC] vh_brand
-[10-Jul-2016 15:45:52 UTC] vh_type
-[10-Jul-2016 15:45:52 UTC] vh_displacement
-[10-Jul-2016 15:45:52 UTC] vh_year
-[10-Jul-2016 15:45:52 UTC] vh_chassis_number
-[10-Jul-2016 15:45:52 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 497
-[10-Jul-2016 15:47:32 UTC] On s'apprête à modifier un engagement
-[10-Jul-2016 15:47:32 UTC] cache
-[10-Jul-2016 15:47:32 UTC] action
-[10-Jul-2016 15:47:32 UTC] id
-[10-Jul-2016 15:47:32 UTC] last_name
-[10-Jul-2016 15:47:32 UTC] first_name
-[10-Jul-2016 15:47:32 UTC] birth_date
-[10-Jul-2016 15:47:32 UTC] email
-[10-Jul-2016 15:47:32 UTC] phone_number
-[10-Jul-2016 15:47:32 UTC] adress
-[10-Jul-2016 15:47:32 UTC] cedex
-[10-Jul-2016 15:47:32 UTC] city
-[10-Jul-2016 15:47:32 UTC] country
-[10-Jul-2016 15:47:32 UTC] insurance
-[10-Jul-2016 15:47:32 UTC] ffm_licence_number
-[10-Jul-2016 15:47:32 UTC] casm_number
-[10-Jul-2016 15:47:32 UTC] team
-[10-Jul-2016 15:47:32 UTC] category
-[10-Jul-2016 15:47:32 UTC] vh_brand
-[10-Jul-2016 15:47:32 UTC] vh_type
-[10-Jul-2016 15:47:32 UTC] vh_displacement
-[10-Jul-2016 15:47:32 UTC] vh_year
-[10-Jul-2016 15:47:32 UTC] vh_chassis_number
-[10-Jul-2016 15:47:32 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 497
-[10-Jul-2016 20:04:43 UTC] PHP Fatal error:  Call to undefined function sml_add_select_option() in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 226
-[10-Jul-2016 20:04:50 UTC] PHP Fatal error:  Call to undefined function sml_add_select_option() in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 226
-[10-Jul-2016 20:04:50 UTC] PHP Fatal error:  Call to undefined function sml_add_select_option() in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 226
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:34 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:20:58 UTC] On s'apprête à modifier un engagement
-[11-Jul-2016 17:20:58 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 502
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:03 UTC] PHP Notice:  Array to string conversion in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 492
-[11-Jul-2016 17:21:16 UTC] On s'apprête à modifier un engagement
-[11-Jul-2016 17:21:16 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 502
-[11-Jul-2016 17:23:03 UTC] On s'apprête à modifier un engagement
-[11-Jul-2016 17:23:03 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 502
-[11-Jul-2016 17:23:58 UTC] On s'apprête à modifier un engagement
-[11-Jul-2016 17:23:58 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 502
-[11-Jul-2016 17:24:10 UTC] On s'apprête à modifier un engagement
-[11-Jul-2016 17:24:10 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 502
-[11-Jul-2016 17:28:49 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[11-Jul-2016 17:29:04 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[11-Jul-2016 17:29:50 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[11-Jul-2016 17:30:13 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[11-Jul-2016 17:31:51 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[11-Jul-2016 17:32:13 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 501
-[11-Jul-2016 20:37:08 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 504
-[11-Jul-2016 20:38:09 UTC] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\shortcode_engagements.php on line 504
+﻿[31-Aug-2016 17:11:01 UTC] On est là
+[31-Aug-2016 17:20:48 UTC] i=1
+[31-Aug-2016 17:20:48 UTC] temp number = 153
+[31-Aug-2016 17:30:20 UTC] i=1
+[31-Aug-2016 17:30:20 UTC] temp number = 153
+[31-Aug-2016 17:30:34 UTC] i=1
+[31-Aug-2016 17:30:34 UTC] temp number = 153
+[31-Aug-2016 17:30:34 UTC] i=2
+[31-Aug-2016 17:30:34 UTC] temp number = 154
+[31-Aug-2016 17:34:16 UTC] i=1
+[31-Aug-2016 17:34:16 UTC] temp number = 154
+[31-Aug-2016 17:34:27 UTC] i=1
+[31-Aug-2016 17:34:27 UTC] temp number = 153
+[31-Aug-2016 17:34:27 UTC] i=2
+[31-Aug-2016 17:34:27 UTC] temp number = 154
+[31-Aug-2016 17:35:30 UTC] i=1
+[31-Aug-2016 17:35:30 UTC] temp number = 4
+[31-Aug-2016 17:35:30 UTC] i=2
+[31-Aug-2016 17:35:30 UTC] temp number = 4
+[06-Sep-2016 13:19:42 UTC] i=1
+[06-Sep-2016 13:19:42 UTC] temp number = 4
+[06-Sep-2016 13:19:42 UTC] i=2
+[06-Sep-2016 13:19:42 UTC] temp number = 4
+[06-Sep-2016 13:19:42 UTC] i=3
+[06-Sep-2016 13:19:42 UTC] temp number = 5
+[06-Sep-2016 13:19:42 UTC] i=4
+[06-Sep-2016 13:19:42 UTC] temp number = 5
+[06-Sep-2016 13:22:08 UTC] i=1
+[06-Sep-2016 13:22:08 UTC] temp number = 4
+[06-Sep-2016 13:22:08 UTC] i=2
+[06-Sep-2016 13:22:08 UTC] temp number = 4
+[06-Sep-2016 13:22:08 UTC] i=3
+[06-Sep-2016 13:22:08 UTC] temp number = 5
+[06-Sep-2016 13:22:08 UTC] i=4
+[06-Sep-2016 13:22:08 UTC] temp number = 5
+[06-Sep-2016 13:22:08 UTC] i=5
+[06-Sep-2016 13:22:08 UTC] temp number = 6
+[06-Sep-2016 13:22:08 UTC] i=6
+[06-Sep-2016 13:22:08 UTC] temp number = 6
+[06-Sep-2016 13:30:03 UTC] i=1
+[06-Sep-2016 13:30:03 UTC] temp number = 1
+[06-Sep-2016 13:41:59 UTC] i=1
+[06-Sep-2016 13:41:59 UTC] temp number = 1
+[06-Sep-2016 13:41:59 UTC] i=2
+[06-Sep-2016 13:41:59 UTC] temp number = 1
+[06-Sep-2016 13:41:59 UTC] i=3
+[06-Sep-2016 13:41:59 UTC] temp number = 4
+[06-Sep-2016 13:44:23 UTC] i=1
+[06-Sep-2016 13:44:23 UTC] temp number = 1
+[06-Sep-2016 13:44:23 UTC] i=2
+[06-Sep-2016 13:44:23 UTC] temp number = 1
+[06-Sep-2016 13:44:23 UTC] i=3
+[06-Sep-2016 13:44:23 UTC] temp number = 4
+[06-Sep-2016 13:52:06 UTC] i=1
+[06-Sep-2016 13:52:06 UTC] temp number = 4
+[06-Sep-2016 13:52:06 UTC] i=2
+[06-Sep-2016 13:52:06 UTC] temp number = 4
+[06-Sep-2016 13:52:43 UTC] i=1
+[06-Sep-2016 13:52:43 UTC] temp number = 5
+[06-Sep-2016 13:53:09 UTC] i=1
+[06-Sep-2016 13:53:09 UTC] temp number = 4
+[06-Sep-2016 13:53:09 UTC] i=2
+[06-Sep-2016 13:53:09 UTC] temp number = 5
+[06-Sep-2016 13:53:09 UTC] i=3
+[06-Sep-2016 13:53:09 UTC] temp number = 5
+[06-Sep-2016 13:55:17 UTC] i=1
+[06-Sep-2016 13:55:17 UTC] temp number = 153
+[23-Sep-2016 20:28:00 UTC] PHP Notice:  Undefined variable: last_name in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\registration.php on line 22
+[23-Sep-2016 20:32:16 UTC] PHP Notice:  Undefined variable: last_name in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\sportmeca\registration.php on line 22
+[23-Sep-2016 22:54:22 UTC] PHP Notice:  Undefined index: time_taken in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\query-monitor\output\html\overview.php on line 69
+[23-Sep-2016 22:54:22 UTC] PHP Notice:  Undefined index: time_taken in D:\Xampp\htdocs\sportMeca\wordpress\wp-content\plugins\query-monitor\output\html\overview.php on line 151
+[23-Sep-2016 22:54:51 UTC] Erreur de la base de données WordPress Duplicate key name 'location_type_code' pour la requête ALTER TABLE wp_woocommerce_tax_rate_locations ADD KEY location_type_code (location_type(40),location_code(90)) faite par require_once('D:\Xampp\htdocs\sportMeca\wordpress\wp-load.php'), require_once('D:\Xampp\htdocs\sportMeca\wordpress\wp-config.php'), require_once('D:\Xampp\htdocs\sportMeca\wordpress\wp-settings.php'), do_action('init'), call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta, QM_DB->query
+[23-Sep-2016 22:54:51 UTC] Erreur de la base de données WordPress Duplicate key name 'location_type_code' pour la requête ALTER TABLE wp_woocommerce_shipping_zone_locations ADD KEY location_type_code (location_type(40),location_code(90)) faite par require_once('D:\Xampp\htdocs\sportMeca\wordpress\wp-load.php'), require_once('D:\Xampp\htdocs\sportMeca\wordpress\wp-config.php'), require_once('D:\Xampp\htdocs\sportMeca\wordpress\wp-settings.php'), do_action('init'), call_user_func_array, WC_Install::check_version, WC_Install::install, WC_Install::create_tables, dbDelta, QM_DB->query
