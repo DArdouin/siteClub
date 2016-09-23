@@ -97,6 +97,9 @@ class QM_Dispatcher_Html extends QM_Dispatcher {
 			'id'    => 'query-monitor',
 			'title' => esc_html( $title ),
 			'href'  => '#qm',
+			'meta'  => array(
+				'classname' => 'hide-if-js',
+			),
 		) );
 
 		$wp_admin_bar->add_menu( array(
@@ -295,11 +298,6 @@ class QM_Dispatcher_Html extends QM_Dispatcher {
 	public function js_admin_bar_menu() {
 
 		$class = implode( ' ', apply_filters( 'qm/output/menu_class', array() ) );
-
-		if ( false === strpos( $class, 'qm-' ) ) {
-			$class .= ' qm-all-clear';
-		}
-
 		$title = implode( '&nbsp;&nbsp;&nbsp;', apply_filters( 'qm/output/title', array() ) );
 
 		if ( empty( $title ) ) {
@@ -332,8 +330,7 @@ class QM_Dispatcher_Html extends QM_Dispatcher {
 			return false;
 		}
 
-		// If this is an async request and not a customizer preview:
-		if ( QM_Util::is_async() && ( ! function_exists( 'is_customize_preview' ) || ! is_customize_preview() ) ) {
+		if ( QM_Util::is_async() && ! is_customize_preview() ) {
 			return false;
 		}
 

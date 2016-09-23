@@ -166,10 +166,8 @@ function wpcf7_enqueue_scripts() {
 
 	$_wpcf7 = array(
 		'loaderUrl' => wpcf7_ajax_loader(),
-		'recaptcha' => array(
-			'messages' => array(
-				'empty' => __( 'Please verify that you are not a robot.',
-					'contact-form-7' ) ) ),
+		'recaptchaEmpty' =>
+			__( 'Please verify that you are not a robot.', 'contact-form-7' ),
 		'sending' => __( 'Sending ...', 'contact-form-7' ) );
 
 	if ( defined( 'WP_CACHE' ) && WP_CACHE ) {

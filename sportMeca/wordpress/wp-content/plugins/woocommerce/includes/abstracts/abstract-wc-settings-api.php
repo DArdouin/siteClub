@@ -60,7 +60,7 @@ abstract class WC_Settings_API {
 	 * Set default required properties for each field.
 	 * @param array
 	 */
-	protected function set_defaults( $field ) {
+	private function set_defaults( $field ) {
 		if ( ! isset( $field['default'] ) ) {
 			$field['default'] = '';
 		}
@@ -815,7 +815,9 @@ abstract class WC_Settings_API {
 	}
 
 	/**
-	 * Validate Password Field. No input sanitization is used to avoid corrupting passwords.
+	 * Validate Password Field.
+	 *
+	 * Make sure the data is escaped correctly, etc.
 	 *
 	 * @param  string $key
 	 * @param  string|null $value Posted Value
@@ -823,7 +825,7 @@ abstract class WC_Settings_API {
 	 */
 	public function validate_password_field( $key, $value ) {
 		$value = is_null( $value ) ? '' : $value;
-		return trim( stripslashes( $value ) );
+		return wp_kses_post( trim( stripslashes( $value ) ) );
 	}
 
 	/**

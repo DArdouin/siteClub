@@ -1,7 +1,5 @@
 (function($) {
 
-	'use strict';
-
 	if (typeof _wpcf7 == 'undefined' || _wpcf7 === null) {
 		_wpcf7 = {};
 	}
@@ -61,7 +59,7 @@
 				tag_type += '*';
 			}
 
-			var components = _wpcf7.taggen.compose(tag_type, $form);
+			components = _wpcf7.taggen.compose(tag_type, $form);
 			$(this).val(components);
 		});
 

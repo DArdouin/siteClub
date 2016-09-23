@@ -33,13 +33,11 @@ class WC_REST_Authentication {
 			return false;
 		}
 
-		$rest_prefix = trailingslashit( rest_get_url_prefix() );
-
 		// Check if our endpoint.
-		$woocommerce = false !== strpos( $_SERVER['REQUEST_URI'], $rest_prefix . 'wc/' );
+		$woocommerce = false !== strpos( $_SERVER['REQUEST_URI'], 'wp-json/wc/' );
 
 		// Allow third party plugins use our authentication methods.
-		$third_party = false !== strpos( $_SERVER['REQUEST_URI'], $rest_prefix . 'wc-' );
+		$third_party = false !== strpos( $_SERVER['REQUEST_URI'], 'wp-json/wc-' );
 
 		return apply_filters( 'woocommerce_rest_is_request_to_rest_api', $woocommerce || $third_party );
 	}

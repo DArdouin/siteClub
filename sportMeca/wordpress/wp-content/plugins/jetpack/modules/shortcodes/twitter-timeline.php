@@ -1,42 +1,29 @@
 <?php
 add_shortcode( 'twitter-timeline', 'twitter_timeline_shortcode' );
 
-function twitter_timeline_shortcode( $atts ) {
+function twitter_timeline_shortcode( $attr ) {
+
 	$default_atts = array(
 		'username' => '',
 		'id'       => '',
-		'width'    => '450',
 		'height'   => '282',
+		'width'    => '450',
 	);
 
-	$atts = shortcode_atts( $default_atts, $atts, 'twitter-timeline' );
+	$attr = shortcode_atts( $default_atts, $attr, 'twitter-timeline' );
 
-	$atts['username'] = preg_replace( '/[^A-Za-z0-9_]+/', '', $atts['username'] );
+	$attr['username'] = preg_replace( '/[^A-Za-z0-9_]+/', '', $attr['username'] );
 
-	if ( empty( $atts['username'] ) && ! is_numeric( $atts['id'] ) ) {
-		return '<!-- ' . __( 'Must specify Twitter Timeline id or username.', 'jetpack' ) . ' -->';
+	if ( empty( $attr['username'] ) ) {
+		return '<!-- ' . __( 'Invalid Twitter Timeline username', 'jetpack' ) . ' -->';
 	}
 
-	$output = '<a class="twitter-timeline"';
-
-	if ( is_numeric( $atts['width'] ) ) {
-		$output .= ' data-width="' . esc_attr( $atts['width'] ) . '"';
-	}
-	if ( is_numeric( $atts['height'] ) ) {
-		$output .= ' data-height="' . esc_attr( $atts['height'] ) . '"';
-	}
-	if ( is_numeric( $atts['id'] ) ) {
-		$output .= ' data-widget-id="' . esc_attr( $atts['id'] ) . '"';
-	}
-	if ( ! empty( $atts['username'] ) ) {
-		$output .= ' href="' . esc_url( 'https://twitter.com/' . $atts['username'] ) . '"';
+	if ( ! is_numeric( $attr['id'] ) ) {
+		return '<!-- ' . __( 'Invalid Twitter Timeline id', 'jetpack' ) . ' -->';
 	}
 
-	$output .= '>';
-
-	$output .= sprintf( __( 'Tweets by @%s', 'jetpack' ), $atts['username'] );
-
-	$output .= '</a>';
+	$tweets_by = sprintf( __( 'Tweets by @%s', 'jetpack' ), $attr['username'] );
+	$output    = '<a class="twitter-timeline" width="' . esc_attr( $attr['width'] ) . '" height="' . esc_attr( $attr['height'] ) . '" href="' . esc_url( 'https://twitter.com/' . $attr['username'] ) . '/" data-widget-id="' . esc_attr( $attr['id'] ) . '">' . esc_html( $tweets_by ) . '</a>';
 
 	wp_enqueue_script( 'jetpack-twitter-timeline' );
 

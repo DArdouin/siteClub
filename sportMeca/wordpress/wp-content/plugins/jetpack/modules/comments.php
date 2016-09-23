@@ -2,13 +2,12 @@
 
 /**
  * Module Name: Comments
- * Module Description: Allow comments with WordPress.com, Twitter, Facebook, or Google+.
+ * Module Description: Let readers comment with WordPress.com, Twitter, Facebook, or Google+ accounts.
  * First Introduced: 1.4
  * Sort Order: 20
  * Requires Connection: Yes
  * Auto Activate: No
  * Module Tags: Social
- * Feature: Engagement
  * Additional Search Queries: comments, comment, facebook, twitter, google+, social
  */
 
@@ -17,6 +16,15 @@ require dirname( __FILE__ ) . '/comments/comments.php';
 if ( is_admin() ) {
 	require dirname( __FILE__ ) . '/comments/admin.php';
 }
+
+Jetpack_Sync::sync_options( __FILE__,
+	'comment_registration',
+	'require_name_email',
+	'show_avatars',
+	'avatar_default',
+	'highlander_comment_form_prompt',
+	'jetpack_comment_form_color_scheme'
+);
 
 function jetpack_comments_load() {
 	Jetpack::enable_module_configurable( __FILE__ );

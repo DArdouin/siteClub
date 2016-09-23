@@ -609,9 +609,10 @@ class WC_API_Orders extends WC_API_Resource {
 					$update_totals = true;
 
 					foreach ( $data[ $line ] as $item ) {
+
 						// Item ID is always required.
 						if ( ! array_key_exists( 'id', $item ) ) {
-							$item['id'] = null;
+							throw new WC_API_Exception( 'woocommerce_invalid_item_id', __( 'Order item ID is required', 'woocommerce' ), 400 );
 						}
 
 						// Create item.

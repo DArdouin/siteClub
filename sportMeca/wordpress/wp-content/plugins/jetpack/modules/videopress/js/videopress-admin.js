@@ -1,5 +1,5 @@
 /* jshint onevar: false, smarttabs: true, devel: true */
-/* global VideoPressAdminSettings, setUserSetting, JSON */
+/* global VideoPressAdminSettings, setUserSetting */
 
 /**
  * VideoPress Admin
@@ -465,7 +465,7 @@
 	var VideoPressModal = new VideoPressModalView();
 
 	// Configuration screen behavior
-	$(document).ready( function() {
+	$(document).on( 'ready', function() {
 		var $form = $( '#videopress-settings' );
 
 		// Not on a configuration screen

@@ -355,8 +355,7 @@ class WC_Webhook {
 		if ( is_wp_error( $response ) ) {
 			$response_code    = $response->get_error_code();
 			$response_message = $response->get_error_message();
-			$response_headers = array();
-			$response_body    = '';
+			$response_headers = $response_body = array();
 
 		} else {
 			$response_code    = wp_remote_retrieve_response_code( $response );

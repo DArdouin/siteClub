@@ -1,5 +1,6 @@
 /*!
-* Do not modify this file directly.  It is compiled SASS code.
+* Do not modify this file directly.  It is compiled Sass code.
+* @see: jetpack/_inc/jetpack.scss
 */
 @font-face {
   font-family: "jetpack";
@@ -8,14 +9,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "jetpack";
     src: url("../_inc/fonts/jetpack/jetpack.svg#jetpack") format("svg");
   }
 }
-
 li.toplevel_page_jetpack .wp-menu-image:before {
   font-family: 'jetpack' !important;
   content: '\f102';
@@ -31,4 +30,8 @@ li.toplevel_page_jetpack .wp-menu-image:before {
   background-repeat: no-repeat;
 }
 
-/*# sourceMappingURL=jetpack-icons.css.map */
+@media (max-width: 900px) {
+  .auto-fold #adminmenu a.toplevel_page_jetpack {
+    height: auto;
+  }
+}

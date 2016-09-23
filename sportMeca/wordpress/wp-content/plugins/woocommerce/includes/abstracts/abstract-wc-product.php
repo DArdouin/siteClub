@@ -214,7 +214,9 @@ class WC_Product {
 	}
 
 	/**
-	 * Get total stock - This is the stock of parent and children combined.
+	 * Get total stock.
+	 *
+	 * This is the stock of parent and children combined.
 	 *
 	 * @return int
 	 */
@@ -630,7 +632,7 @@ class WC_Product {
 	 * @return bool
 	 */
 	public function backorders_allowed() {
-		return apply_filters( 'woocommerce_product_backorders_allowed', $this->backorders === 'yes' || $this->backorders === 'notify' ? true : false, $this->id, $this );
+		return apply_filters( 'woocommerce_product_backorders_allowed', $this->backorders === 'yes' || $this->backorders === 'notify' ? true : false, $this->id );
 	}
 
 	/**
@@ -639,7 +641,7 @@ class WC_Product {
 	 * @return bool
 	 */
 	public function backorders_require_notification() {
-		return apply_filters( 'woocommerce_product_backorders_require_notification', $this->managing_stock() && $this->backorders === 'notify' ? true : false, $this );
+		return $this->managing_stock() && $this->backorders === 'notify' ? true : false;
 	}
 
 	/**
@@ -665,33 +667,23 @@ class WC_Product {
 	/**
 	 * Returns the availability of the product.
 	 *
-	 * If stock management is enabled at global and product level, a stock message
-	 * will be shown. e.g. In stock, In stock x10, Out of stock.
-	 *
-	 * If stock management is disabled at global or product level, out of stock
-	 * will be shown when needed, but in stock will be hidden from view.
-	 *
-	 * This can all be changed through use of the woocommerce_get_availability filter.
-	 *
 	 * @return string
 	 */
 	public function get_availability() {
-		return apply_filters( 'woocommerce_get_availability', array(
-			'availability' => $this->get_availability_text(),
-			'class'        => $this->get_availability_class(),
-		), $this );
-	}
+		// Default to in-stock
+		$availability = __( 'In stock', 'woocommerce' );
+		$class        = 'in-stock';
 
-	/**
-	 * Get availability text based on stock status.
-	 *
-	 * @return string
-	 */
-	protected function get_availability_text() {
+		// If out of stock, this takes priority over all other settings.
 		if ( ! $this->is_in_stock() ) {
 			$availability = __( 'Out of stock', 'woocommerce' );
+			$class        = 'out-of-stock';
+
+		// Any further we can assume status is set to in stock.
 		} elseif ( $this->managing_stock() && $this->is_on_backorder( 1 ) ) {
-			$availability = $this->backorders_require_notification() ? __( 'Available on backorder', 'woocommerce' ) : __( 'In stock', 'woocommerce' );
+			$availability = __( 'Available on backorder', 'woocommerce' );
+			$class        = 'available-on-backorder';
+
 		} elseif ( $this->managing_stock() ) {
 			switch ( get_option( 'woocommerce_stock_format' ) ) {
 				case 'no_amount' :
@@ -716,26 +708,9 @@ class WC_Product {
 					}
 				break;
 			}
-		} else {
-			$availability = '';
 		}
-		return apply_filters( 'woocommerce_get_availability_text', $availability, $this );
-	}
 
-	/**
-	 * Get availability classname based on stock status.
-	 *
-	 * @return string
-	 */
-	protected function get_availability_class() {
-		if ( ! $this->is_in_stock() ) {
-			$class = 'out-of-stock';
-		} elseif ( $this->managing_stock() && $this->is_on_backorder( 1 ) && $this->backorders_require_notification() ) {
-			$class = 'available-on-backorder';
-		} else {
-			$class = 'in-stock';
-		}
-		return apply_filters( 'woocommerce_get_availability_class', $class, $this );
+		return apply_filters( 'woocommerce_get_availability', array( 'availability' => $availability, 'class' => $class ), $this );
 	}
 
 	/**
@@ -1160,7 +1135,7 @@ class WC_Product {
 		global $wpdb;
 
 		$counts     = array();
-		$raw_counts = $wpdb->get_results( $wpdb->prepare( "
+		$raw_counts = $wpdb->get_results( $wpdb->prepare("
 			SELECT meta_value, COUNT( * ) as meta_value_count FROM $wpdb->commentmeta
 			LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
 			WHERE meta_key = 'rating'

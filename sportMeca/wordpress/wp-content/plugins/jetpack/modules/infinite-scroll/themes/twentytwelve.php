@@ -20,10 +20,8 @@ add_action( 'after_setup_theme', 'twenty_twelve_infinite_scroll_init' );
  * Enqueue CSS stylesheet with theme styles for infinity.
  */
 function twenty_twelve_infinite_scroll_enqueue_styles() {
-	if ( wp_script_is( 'the-neverending-homepage' ) ) {
-		// Add theme specific styles.
-		wp_enqueue_style( 'infinity-twentytwelve', plugins_url( 'twentytwelve.css', __FILE__ ), array( 'the-neverending-homepage' ), '20120817' );
-	}
+    // Add theme specific styles.
+    wp_enqueue_style( 'infinity-twentytwelve', plugins_url( 'twentytwelve.css', __FILE__ ), array( 'the-neverending-homepage' ), '20120817' );
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twelve_infinite_scroll_enqueue_styles', 25 );
 

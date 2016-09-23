@@ -246,7 +246,7 @@ class csstidy {
 	 * @access private
 	 * @version 1.3
 	 */
-	function __construct() {
+	function csstidy() {
 		$this->settings['remove_bslash'] = true;
 		$this->settings['compress_colors'] = true;
 		$this->settings['compress_font-weight'] = true;

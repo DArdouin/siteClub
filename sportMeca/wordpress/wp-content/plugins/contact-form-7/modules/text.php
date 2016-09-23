@@ -20,21 +20,18 @@ function wpcf7_add_shortcode_text() {
 function wpcf7_text_shortcode_handler( $tag ) {
 	$tag = new WPCF7_Shortcode( $tag );
 
-	if ( empty( $tag->name ) ) {
+	if ( empty( $tag->name ) )
 		return '';
-	}
 
 	$validation_error = wpcf7_get_validation_error( $tag->name );
 
 	$class = wpcf7_form_controls_class( $tag->type, 'wpcf7-text' );
 
-	if ( in_array( $tag->basetype, array( 'email', 'url', 'tel' ) ) ) {
+	if ( in_array( $tag->basetype, array( 'email', 'url', 'tel' ) ) )
 		$class .= ' wpcf7-validates-as-' . $tag->basetype;
-	}
 
-	if ( $validation_error ) {
+	if ( $validation_error )
 		$class .= ' wpcf7-not-valid';
-	}
 
 	$atts = array();
 
@@ -42,8 +39,7 @@ function wpcf7_text_shortcode_handler( $tag ) {
 	$atts['maxlength'] = $tag->get_maxlength_option();
 	$atts['minlength'] = $tag->get_minlength_option();
 
-	if ( $atts['maxlength'] && $atts['minlength']
-	&& $atts['maxlength'] < $atts['minlength'] ) {
+	if ( $atts['maxlength'] && $atts['minlength'] && $atts['maxlength'] < $atts['minlength'] ) {
 		unset( $atts['maxlength'], $atts['minlength'] );
 	}
 
@@ -51,16 +47,11 @@ function wpcf7_text_shortcode_handler( $tag ) {
 	$atts['id'] = $tag->get_id_option();
 	$atts['tabindex'] = $tag->get_option( 'tabindex', 'int', true );
 
-	$atts['autocomplete'] = $tag->get_option( 'autocomplete',
-		'[-0-9a-zA-Z]+', true );
-
-	if ( $tag->has_option( 'readonly' ) ) {
+	if ( $tag->has_option( 'readonly' ) )
 		$atts['readonly'] = 'readonly';
-	}
 
-	if ( $tag->is_required() ) {
+	if ( $tag->is_required() )
 		$atts['aria-required'] = 'true';
-	}
 
 	$atts['aria-invalid'] = $validation_error ? 'true' : 'false';
 

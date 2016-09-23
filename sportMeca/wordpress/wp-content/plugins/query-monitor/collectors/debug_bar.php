@@ -25,7 +25,6 @@ final class QM_Collector_Debug_Bar extends QM_Collector {
 
 	public function name() {
 		$title = $this->get_panel()->title();
-		/* translators: %s: Name of a Debug Bar panel */
 		return sprintf( __( 'Debug Bar: %s', 'query-monitor' ), $title );
 	}
 

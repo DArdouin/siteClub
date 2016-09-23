@@ -44,20 +44,18 @@ class Sharing_Service {
 		// if you update this list, please update the REST API tests
 		// in bin/tests/api/suites/SharingTest.php
 		$services = array(
-			'email'             => 'Share_Email',
-			'print'             => 'Share_Print',
-			'facebook'          => 'Share_Facebook',
-			'linkedin'          => 'Share_LinkedIn',
-			'reddit'            => 'Share_Reddit',
-			'twitter'           => 'Share_Twitter',
-			'press-this'        => 'Share_PressThis',
-			'google-plus-1'     => 'Share_GooglePlus1',
-			'tumblr'            => 'Share_Tumblr',
-			'pinterest'         => 'Share_Pinterest',
-			'pocket'            => 'Share_Pocket',
-			'telegram'          => 'Share_Telegram',
-			'jetpack-whatsapp'  => 'Jetpack_Share_WhatsApp',
-			'skype'             => 'Share_Skype',
+			'email'         => 'Share_Email',
+			'print'         => 'Share_Print',
+			'facebook'      => 'Share_Facebook',
+			'linkedin'      => 'Share_LinkedIn',
+			'reddit'        => 'Share_Reddit',
+			'twitter'       => 'Share_Twitter',
+			'press-this'    => 'Share_PressThis',
+			'google-plus-1' => 'Share_GooglePlus1',
+			'tumblr'        => 'Share_Tumblr',
+			'pinterest'     => 'Share_Pinterest',
+			'pocket'        => 'Share_Pocket',
+			'skype'         => 'Share_Skype',
 		);
 
 		if ( $include_custom ) {
@@ -162,7 +160,7 @@ class Sharing_Service {
 			'currently_enabled' => $this->get_blog_services()
 		) );
 
-		return update_option( 'sharing-services', array( 'visible' => $visible, 'hidden' => $hidden ) );
+		update_option( 'sharing-services', array( 'visible' => $visible, 'hidden' => $hidden ) );
 	}
 
 	public function get_blog_services() {
@@ -559,7 +557,7 @@ function sharing_add_header() {
 
 	if ( count( $enabled['all'] ) > 0 && sharing_maybe_enqueue_scripts() ) {
 		wp_enqueue_style( 'sharedaddy', plugin_dir_url( __FILE__ ) .'sharing.css', array(), JETPACK__VERSION );
-		wp_enqueue_style( 'social-logos' );
+		wp_enqueue_style( 'genericons' );
 	}
 
 }

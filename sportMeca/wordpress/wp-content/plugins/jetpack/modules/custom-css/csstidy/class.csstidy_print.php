@@ -66,7 +66,7 @@ class csstidy_print {
 	 * @access private
 	 * @version 1.0
 	 */
-	function __construct(&$css) {
+	function csstidy_print(&$css) {
 		$this->parser = & $css;
 		$this->css = & $css->css;
 		$this->template = & $css->template;

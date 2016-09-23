@@ -129,7 +129,6 @@ class WC_REST_Orders_Controller extends WC_REST_Posts_Controller {
 			'parent_id'            => $post->post_parent,
 			'status'               => $order->get_status(),
 			'order_key'            => $order->order_key,
-			'number'               => $order->get_order_number(),
 			'currency'             => $order->get_order_currency(),
 			'version'              => $order->order_version,
 			'prices_include_tax'   => $order->prices_include_tax,
@@ -300,10 +299,8 @@ class WC_REST_Orders_Controller extends WC_REST_Posts_Controller {
 					);
 				}
 
-				if ( isset( $fee_line_taxes['subtotal'] ) ) {
-					foreach ( $fee_line_taxes['subtotal'] as $tax_rate_id => $tax ) {
-						$fee_tax[ $tax_rate_id ]['subtotal'] = $tax;
-					}
+				foreach ( $fee_line_taxes['subtotal'] as $tax_rate_id => $tax ) {
+					$fee_tax[ $tax_rate_id ]['subtotal'] = $tax;
 				}
 
 				$fee_line['taxes'] = array_values( $fee_tax );
@@ -544,7 +541,7 @@ class WC_REST_Orders_Controller extends WC_REST_Posts_Controller {
 				update_post_meta( $order->id, '_payment_method', $request['payment_method'] );
 			}
 			if ( ! empty( $request['payment_method_title'] ) ) {
-				update_post_meta( $order->id, '_payment_method_title', $request['payment_method_title'] );
+				update_post_meta( $order->id, '_payment_method_title', $request['payment_method'] );
 			}
 			if ( true === $request['set_paid'] ) {
 				$order->payment_complete( $request['transaction_id'] );
@@ -1013,7 +1010,7 @@ class WC_REST_Orders_Controller extends WC_REST_Posts_Controller {
 					foreach ( $request[ $line ] as $item ) {
 						// Item ID is always required.
 						if ( ! array_key_exists( 'id', $item ) ) {
-							$item['id'] = null;
+							throw new WC_REST_Exception( 'woocommerce_rest_invalid_item_id', __( 'Order item ID is required.', 'woocommerce' ), 400 );
 						}
 
 						// Create item.
@@ -1155,12 +1152,6 @@ class WC_REST_Orders_Controller extends WC_REST_Posts_Controller {
 				),
 				'order_key' => array(
 					'description' => __( 'Order key.', 'woocommerce' ),
-					'type'        => 'string',
-					'context'     => array( 'view', 'edit' ),
-					'readonly'    => true,
-				),
-				'number' => array(
-					'description' => __( 'Order number.', 'woocommerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

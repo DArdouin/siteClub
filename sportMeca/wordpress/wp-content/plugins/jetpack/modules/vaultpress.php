@@ -1,14 +1,14 @@
 <?php
 /**
  * Module Name: Data Backups
- * Module Description: Off-site backups, security scans, and automatic fixes.
+ * Module Description: Daily or real-time backups.
  * First Introduced: 0:1.2
  * Sort Order: 32
  * Deactivate: false
  * Free: false
  * Requires Connection: Yes
  * Auto Activate: Yes
- * Feature: Security, Health
+ * Feature: Performance-Security
  * Additional Search Queries: vaultpress, backup, security
  */
 

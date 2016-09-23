@@ -289,8 +289,6 @@ abstract class Publicize_Base {
 			!did_action( 'wp_ajax_instapost_publish' )
 		&&
 			!did_action( 'wp_ajax_post_reblog' )
-		&&
-			!did_action( 'wp_ajax_press-this-save-post' )
 		) {
 			$submit_post = false;
 		}
@@ -328,11 +326,7 @@ abstract class Publicize_Base {
 		}
 
 		// Did this request happen via wp-admin?
-		$from_web = isset( $_SERVER['REQUEST_METHOD'] )
-			&&
-			'post' == strtolower( $_SERVER['REQUEST_METHOD'] ) 
-			&& 
-			isset( $_POST[$this->ADMIN_PAGE] );
+		$from_web = 'post' == strtolower( $_SERVER['REQUEST_METHOD'] ) && isset( $_POST[$this->ADMIN_PAGE] );
 
 		if ( ( $from_web || defined( 'POST_BY_EMAIL' ) ) && isset( $_POST['wpas_title'] ) ) {
 			if ( empty( $_POST['wpas_title'] ) ) {

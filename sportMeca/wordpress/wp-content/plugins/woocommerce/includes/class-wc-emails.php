@@ -289,29 +289,26 @@ class WC_Emails {
 				continue;
 			}
 
-			$product        = apply_filters( 'woocommerce_order_item_product', $order->get_product_from_item( $item ), $item );
-			$product_exists = is_object( $product );
-			$is_visible     = $product_exists && $product->is_visible();
+			$product = apply_filters( 'woocommerce_order_item_product', $order->get_product_from_item( $item ), $item );
+			$is_visible = $product && $product->is_visible();
 
 			$item_offered = array(
 				'@type' => 'Product',
-				'name' => apply_filters( 'woocommerce_order_item_name', $item['name'], $item, $is_visible ),
+				'name' => apply_filters( 'woocommerce_order_item_name', $item['name'], $item, $is_visible )
 			);
 
-			if ( $product_exists ) {
-				if ( $sku = $product->get_sku() ) {
-					$item_offered['sku'] = $sku;
-				}
-
-				if ( $image_id = $product->get_image_id() ) {
-					$item_offered['image'] = wp_get_attachment_image_url( $image_id, 'thumbnail' );
-				}
+			if ( $sku = $product->get_sku() ) {
+				$item_offered['sku'] = $sku;
 			}
 
 			if ( $is_visible ) {
 				$item_offered['url'] = get_permalink( $product->get_id() );
 			} else {
 				$item_offered['url'] = get_home_url();
+			}
+
+			if ( $image_id = $product->get_image_id() ) {
+				$item_offered['image'] = wp_get_attachment_image_url( $image_id, 'thumbnail' );
 			}
 
 			$accepted_offer = (object) array(
@@ -323,7 +320,7 @@ class WC_Emails {
 					'@type' => 'QuantitativeValue',
 					'value' => apply_filters( 'woocommerce_email_order_item_quantity', $item['qty'], $item )
 				),
-				'url'              => get_home_url(),
+				'url'   => get_home_url(),
 			);
 
 			$accepted_offers[] = $accepted_offer;
@@ -339,7 +336,7 @@ class WC_Emails {
 			'orderNumber'    => strval( $order->get_order_number() ),
 			'priceCurrency'  => $order->get_order_currency(),
 			'price'          => $order->get_total(),
-			'acceptedOffer'  => $accepted_offers,
+			'acceptedOffer'  => count( $accepted_offers ) > 1 ? $accepted_offers : $accepted_offers[0],
 			'url'            => $order->get_view_order_url(),
 		);
 

@@ -29,7 +29,7 @@ jQuery( function( $ ) {
 			this.$checkout_form.on( 'submit', this.submit );
 
 			// Inline validation
-			this.$checkout_form.on( 'blur change', '.input-text, select, input:checkbox', this.validate_field );
+			this.$checkout_form.on( 'blur change', '.input-text, select', this.validate_field );
 
 			// Manual trigger
 			this.$checkout_form.on( 'update', this.trigger_update_checkout );
@@ -277,9 +277,6 @@ jQuery( function( $ ) {
 						return;
 					}
 
-					// Remove any notices added previously
-					$( '.woocommerce-NoticeGroup-updateOrderReview' ).remove();
-
 					var termsCheckBoxChecked = $( '#terms' ).prop( 'checked' );
 
 					// Always update the fragments
@@ -300,18 +297,17 @@ jQuery( function( $ ) {
 
 						var $form = $( 'form.checkout' );
 
-						// Remove notices from all sources
 						$( '.woocommerce-error, .woocommerce-message' ).remove();
 
-						// Add new errors returned by this event
+						// Add new errors
 						if ( data.messages ) {
-							$form.prepend( '<div class="woocommerce-NoticeGroup-updateOrderReview">' + data.messages + '</div>' );
+							$form.prepend( data.messages );
 						} else {
 							$form.prepend( data );
 						}
 
 						// Lose focus for all fields
-						$form.find( '.input-text, select, input:checkbox' ).blur();
+						$form.find( '.input-text, select' ).blur();
 
 						// Scroll to top
 						$( 'html, body' ).animate( {
@@ -440,7 +436,7 @@ jQuery( function( $ ) {
 			$( '.woocommerce-error, .woocommerce-message' ).remove();
 			wc_checkout_form.$checkout_form.prepend( error_message );
 			wc_checkout_form.$checkout_form.removeClass( 'processing' ).unblock();
-			wc_checkout_form.$checkout_form.find( '.input-text, select, input:checkbox' ).blur();
+			wc_checkout_form.$checkout_form.find( '.input-text, select' ).blur();
 			$( 'html, body' ).animate({
 				scrollTop: ( $( 'form.checkout' ).offset().top - 100 )
 			}, 1000 );

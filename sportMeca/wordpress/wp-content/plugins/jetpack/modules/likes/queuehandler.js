@@ -1,4 +1,4 @@
-/* global pm, wpcom_reblog, JSON */
+/* global pm, wpcom_reblog */
 
 var jetpackLikesWidgetQueue = [];
 var jetpackLikesWidgetBatch = [];

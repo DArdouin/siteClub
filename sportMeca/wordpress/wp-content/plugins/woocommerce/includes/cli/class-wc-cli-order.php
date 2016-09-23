@@ -473,7 +473,7 @@ class WC_CLI_Order extends WC_CLI_Command {
 
 						// item ID is always required
 						if ( ! array_key_exists( 'id', $item ) ) {
-							$item['id'] = null;
+							throw new WC_CLI_Exception( 'woocommerce_invalid_item_id', __( 'Order item ID is required', 'woocommerce' ) );
 						}
 
 						// create item

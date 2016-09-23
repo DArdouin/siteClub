@@ -229,9 +229,7 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 		if ( $args['hierarchical'] ) {
 			$walker = new WPCOM_JSON_API_List_Comments_Walker;
 			$comment_ids = $walker->paged_walk( $comments, get_option( 'thread_comments_depth', -1 ), isset( $args['page'] ) ? $args['page'] : 1 , $args['number'] );
-			if ( ! empty( $comment_ids ) ) {
-				$comments = array_map( 'get_comment', $comment_ids );
-			}
+			$comments = array_map( 'get_comment', $comment_ids );
 		}
 
 		$return = array();
@@ -246,12 +244,10 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 				break;
 			case 'comments' :
 				$return_comments = array();
-				if ( ! empty( $comments ) ) {
-					foreach ( $comments as $comment ) {
-						$the_comment = $this->get_comment( $comment->comment_ID, $args['context'] );
-						if ( $the_comment && !is_wp_error( $the_comment ) ) {
-							$return_comments[] = $the_comment;
-						}
+				foreach ( $comments as $comment ) {
+					$the_comment = $this->get_comment( $comment->comment_ID, $args['context'] );
+					if ( $the_comment && !is_wp_error( $the_comment ) ) {
+						$return_comments[] = $the_comment;
 					}
 				}
 

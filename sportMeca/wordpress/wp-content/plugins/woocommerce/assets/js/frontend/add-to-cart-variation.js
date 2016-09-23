@@ -104,29 +104,27 @@
 
 				$form.find( '.variations select' ).each( function() {
 					var attribute_name = $( this ).data( 'attribute_name' ) || $( this ).attr( 'name' );
-					var value          = $( this ).val() || '';
 
-					if ( value.length === 0 ) {
+					if ( $( this ).val().length === 0 ) {
 						all_attributes_chosen = false;
 					} else {
 						some_attributes_chosen = true;
 					}
 
-					data[ attribute_name ] = value;
+					data[ attribute_name ] = $( this ).val();
 				});
 
 				if ( all_attributes_chosen ) {
 					// Get a matchihng variation via ajax
-					data.product_id  = $product_id;
-					data.custom_data = $form.data( 'custom_data' );
+					data.product_id = $product_id;
 
-					$form.block( {
+					$( '.variations_form' ).block({
 						message: null,
 						overlayCSS: {
 							background: '#fff',
 							opacity: 0.6
 						}
-					} );
+					});
 
 					$xhr = $.ajax( {
 						url: wc_cart_fragments_params.wc_ajax_url.toString().replace( '%%endpoint%%', 'get_variation' ),
@@ -142,7 +140,7 @@
 							}
 						},
 						complete: function() {
-							$form.unblock();
+							$( '.variations_form' ).unblock();
 						}
 					} );
 				} else {
@@ -267,9 +265,8 @@
 
 			$form.find( '.variations select' ).each( function() {
 				var attribute_name = $( this ).data( 'attribute_name' ) || $( this ).attr( 'name' );
-				var value          = $( this ).val() || '';
 
-				if ( value.length === 0 ) {
+				if ( $( this ).val().length === 0 ) {
 					all_attributes_chosen = false;
 				} else {
 					some_attributes_chosen = true;
@@ -280,7 +277,7 @@
 					current_settings[ attribute_name ] = '';
 				} else {
 					// Add to settings array
-					current_settings[ attribute_name ] = value;
+					current_settings[ attribute_name ] = $( this ).val();
 				}
 			});
 

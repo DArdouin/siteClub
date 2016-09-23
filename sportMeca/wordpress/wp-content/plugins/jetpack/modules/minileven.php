@@ -2,21 +2,21 @@
 
 /**
  * Module Name: Mobile Theme
- * Module Description: Optimize your site for smartphones and tablets.
+ * Module Description: Optimize your site with a mobile-friendly theme for smartphones.
  * Sort Order: 21
  * Recommendation Order: 11
  * First Introduced: 1.8
  * Requires Connection: No
  * Auto Activate: No
  * Module Tags: Appearance, Mobile, Recommended
- * Feature: Appearance
+ * Feature: Recommended
  * Additional Search Queries: mobile, theme, minileven
  */
 
 function jetpack_load_minileven() {
 	include dirname( __FILE__ ) . "/minileven/minileven.php";
 
-	if ( Jetpack_Options::get_option_and_ensure_autoload( 'wp_mobile_app_promos', '0' ) != '1' )
+	if ( get_option( 'wp_mobile_app_promos' ) != '1' )
 		remove_action( 'wp_mobile_theme_footer', 'jetpack_mobile_app_promo' );
 }
 
@@ -129,8 +129,6 @@ function minileven_enabled( $wp_mobile_disable_option ) {
 	return true;
 }
 
-if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-	add_filter( 'option_wp_mobile_disable', 'minileven_enabled' );
-}
+add_filter( 'option_wp_mobile_disable', 'minileven_enabled' );
 
 jetpack_load_minileven();

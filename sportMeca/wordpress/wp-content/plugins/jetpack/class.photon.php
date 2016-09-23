@@ -45,6 +45,9 @@ class Jetpack_Photon {
 	 * @return null
 	 */
 	private function setup() {
+		// Display warning if site is private
+		add_action( 'jetpack_activate_module_photon', array( $this, 'action_jetpack_activate_module_photon' ) );
+
 		if ( ! function_exists( 'jetpack_photon_url' ) )
 			return;
 
@@ -61,6 +64,17 @@ class Jetpack_Photon {
 
 		// Helpers for maniuplated images
 		add_action( 'wp_enqueue_scripts', array( $this, 'action_wp_enqueue_scripts' ), 9 );
+	}
+
+	/**
+	 * Check if site is private and warn user if it is
+	 *
+	 * @uses Jetpack::check_privacy
+	 * @action jetpack_activate_module_photon
+	 * @return null
+	 */
+	public function action_jetpack_activate_module_photon() {
+		Jetpack::check_privacy( __FILE__ );
 	}
 
 	/**
@@ -612,11 +626,6 @@ class Jetpack_Photon {
 				continue;
 			}
 
-			/** This filter is already documented in class.photon.php */
-			if ( apply_filters( 'jetpack_photon_skip_image', false, $source['url'], $source ) ) {
-				continue;
-			}
-
 			$url = $source['url'];
 			list( $width, $height ) = Jetpack_Photon::parse_dimensions_from_filename( $url );
 
@@ -657,19 +666,13 @@ class Jetpack_Photon {
 		 * @param array|bool $multipliers Array of multipliers to use or false to bypass.
 		 */
 		$multipliers = apply_filters( 'jetpack_photon_srcset_multipliers', array( 2, 3 ) );
-		$url         = trailingslashit( $upload_dir['baseurl'] ) . $image_meta['file'];
 
-		if (
-			/** Short-circuit via jetpack_photon_srcset_multipliers filter. */
-			is_array( $multipliers )
-			/** This filter is already documented in class.photon.php */
-			&& ! apply_filters( 'jetpack_photon_skip_image', false, $url, null )
-			/** Verify basic meta is intact. */
-			&& isset( $image_meta['width'] ) && isset( $image_meta['height'] ) && isset( $image_meta['file'] )
-			/** Verify we have the requested width/height. */
-			&& isset( $size_array[0] ) && isset( $size_array[1] )
+		if ( is_array( $multipliers ) // Short-circuit via jetpack_photon_srcset_multipliers filter.
+			&& isset( $image_meta['width'] ) && isset( $image_meta['height'] ) && isset( $image_meta['file'] ) // Verify basic meta is intact.
+			&& isset( $size_array[0] ) && isset( $size_array[1] ) // Verify we have the requested width/height.
 			) {
 
+			$url = trailingslashit( $upload_dir['baseurl'] ) . $image_meta['file'];
 			$fullwidth  = $image_meta['width'];
 			$fullheight = $image_meta['height'];
 			$reqwidth   = $size_array[0];
@@ -692,7 +695,6 @@ class Jetpack_Photon {
 			$newsources = null;
 
 			foreach ( $multipliers as $multiplier ) {
-
 				$newwidth = $base * $multiplier;
 				foreach ( $currentwidths as $currentwidth ){
 					// If a new width would be within 100 pixes of an existing one or larger than the full size image, skip.
@@ -731,16 +733,12 @@ class Jetpack_Photon {
 	 * Filters an array of image `sizes` values, using $content_width instead of image's full size.
 	 *
 	 * @since 4.0.4
-	 * @since 4.1.0 Returns early for images not within the_content.
 	 * @param array $sizes An array of media query breakpoints.
 	 * @param array $size  Width and height of the image
 	 * @uses Jetpack::get_content_width
 	 * @return array An array of media query breakpoints.
 	 */
 	public function filter_sizes( $sizes, $size ) {
-		if ( ! doing_filter( 'the_content' ) ){
-			return $sizes;
-		}
 		$content_width = Jetpack::get_content_width();
 		if ( ! $content_width ) {
 			$content_width = 1000;

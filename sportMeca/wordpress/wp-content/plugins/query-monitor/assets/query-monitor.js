@@ -108,7 +108,7 @@ jQuery( function($) {
 					return false;
 				};
 
-			} else if ( window.wp && wp.themes && wp.themes.RunInstaller && wp.themes.RunInstaller.view ) {
+			} else if ( window.wp && wp.themes && wp.themes.RunInstaller ) {
 				// Infinite scrolling on Appearance -> Add New screens
 
 				var view = wp.themes.RunInstaller.view.view;
@@ -182,6 +182,9 @@ jQuery( function($) {
 		var results = table.find('.qm-items-shown').removeClass('qm-hide');
 		results.find('.qm-items-number').text( QM_i18n.number_format( matches.length, 0 ) );
 		results.find('.qm-items-time').text(time);
+
+		$(this).blur();
+
 	});
 
 	$('#qm').find('.qm-filter-trigger').on('click',function(e){
@@ -200,13 +203,10 @@ jQuery( function($) {
 	$('#qm').find('.qm-toggle').on('click',function(e){
 		var el = $(this);
 		$(this).closest('td').find('.qm-toggled').slideToggle(100,function(){
-			if ( el.attr('data-off') == el.text() ) {
-				el.closest('td').removeClass('qm-toggled-on');
+			if ( el.attr('data-off') == el.text() )
 				el.text(el.attr('data-on'));
-			} else {
-				el.closest('td').addClass('qm-toggled-on');
+			else
 				el.text(el.attr('data-off'));
-			}
 		});
 		e.preventDefault();
 	});

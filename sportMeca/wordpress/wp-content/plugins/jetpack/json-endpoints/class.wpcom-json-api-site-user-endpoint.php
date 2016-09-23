@@ -43,9 +43,12 @@ class WPCOM_JSON_API_Site_User_Endpoint extends WPCOM_JSON_API_Endpoint {
 			return $this->get_user( $user->ID );
 		} else if ( 'POST' === $this->api->method ) {
 			if ( ! current_user_can_for_blog( $blog_id, 'promote_users' ) ) {
-				return new WP_Error( 'unauthorized_no_promote_cap', 'User cannot promote users for specified site', 403 );
+				return new WP_Error( 'unauthorized', 'User cannot promote users for specified site', 403 );
 			}
-			return $this->update_user( $user_id, $blog_id );
+			if ( get_current_user_id() == $user_id ) {
+				return new WP_Error( 'unauthorized', 'You cannot change your own role', 403 );
+			}
+			return $this->update_user( $user_id );
 		} else {
 			return new WP_Error( 'bad_request', 'An unsupported request method was used.' );
 		}
@@ -66,25 +69,15 @@ class WPCOM_JSON_API_Site_User_Endpoint extends WPCOM_JSON_API_Endpoint {
 	 *
 	 * @return (array)
 	 */
-	public function update_user( $user_id, $blog_id ) {
+	public function update_user( $user_id ) {
 		$input = $this->input();
 		$user['ID'] = $user_id;
-		$is_wpcom = defined( 'IS_WPCOM' ) && IS_WPCOM;
-
-		if ( get_current_user_id() == $user_id && isset( $input['roles'] ) ) {
-			return new WP_Error( 'unauthorized', 'You cannot change your own role', 403 );
-		}
-
-		if ( $is_wpcom && $user_id !== get_current_user_id() && $user_id == wpcom_get_blog_owner( $blog_id ) ) {
-			return new WP_Error( 'unauthorized_edit_owner', 'Current user can not edit blog owner', 403 );
-		}
-
-		if ( ! $is_wpcom ) {
+		if ( ! ( defined( 'IS_WPCOM' ) && IS_WPCOM ) ) {
 			foreach ( $input as $key => $value ) {
 				if ( ! is_array( $value ) ) {
 					$value = trim( $value );
 				}
-				$value = wp_unslash( $value );
+				$value      = wp_unslash( $value );
 				switch ( $key ) {
 					case 'first_name':
 					case 'last_name':

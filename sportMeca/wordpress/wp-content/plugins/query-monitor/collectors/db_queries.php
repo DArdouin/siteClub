@@ -193,7 +193,7 @@ class QM_Collector_DB_Queries extends QM_Collector {
 				$row = array(
 					'caller'      => 'Unknown',
 					'caller_name' => 'Unknown',
-					'stack'       => '',
+					'stack'       => array(),
 					'sql'         => $error['query'],
 					'result'      => new WP_Error( 'qmdb', $error['error_str'] ),
 					'type'        => '',
